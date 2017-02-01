@@ -1,0 +1,175 @@
+/* Color palettes:
+http://paletton.com/palette.php?uid=13x0u0kuiiUvNtru4nlwudexs7O
+http://paletton.com/palette.php?uid=13x0u0k7UUa3cZA5wXlaiQ5cFL3
+ */
+/** {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+ 
+html,
+body,
+div{
+    margin: 0;
+    padding: 0;
+}*/
+body {
+    height: 120%;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #CDE4F5;
+}
+
+#banner {
+    margin-top: 30px;
+}
+
+#banner h1 {
+    font-size: 3em;    
+}
+
+.icons {
+    font-size: 1.5em;
+}
+
+.icons a {
+    color: white !important;   
+    padding-left: 5px;  
+}
+
+.icons img {
+    max-height: 24px;
+    vertical-align: top;
+}
+
+.badge img {
+    max-height: 150px;
+    border-radius: 50%;
+}
+
+.bubbles img {
+    max-height: 150px;
+}
+
+section {
+    text-align: center;
+    margin: auto;
+    max-width: 400px;
+    padding: 0 25px;
+}
+
+section p {
+    font-family: 'Jura', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.4em;
+}
+
+hr {
+    max-width: 60%;
+}
+
+hr.heart {
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+}
+hr.heart:after {
+	content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #8c8b8b;
+	font-size: 18px;
+}
+hr.symbol {
+	border-top: 1px solid #8c8b8b;
+	text-align: center;
+}
+hr.symbol:after {
+	content: '§';
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: transparent;
+	color: #8c8b8b;
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+hr.curl { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #9DC3E0; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+  max-width: 60%;
+} 
+hr.curl:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #9DC3E0; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+.fadeIn {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out; 
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.blue-green-gradient {
+    background-size: cover;
+    background: #021828; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top,#021828, #0B5A97) no-repeat; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #021828, #0B5A97) no-repeat; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right,#021828, #0B5A97) no-repeat; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #021828, #0B5A97) no-repeat; /* Standard syntax */
+}
+
+
+/* Bigger than 550 */
+@media (min-width: 420px) {
+    section {
+        max-width: unset;        
+        padding: 0 15px;
+    }
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+    section {
+        max-width: 600px;
+        padding: 0 5px;
+        /*margin: auto;*/
+    }
+}
+
+/* Bigger than 750 */
+@media (min-width: 650px) {
+    section {
+        width: 700px;
+        padding: unset;
+        /*margin-left: -250px;
+        left: 50%;
+        position: absolute;*/
+    }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+}
