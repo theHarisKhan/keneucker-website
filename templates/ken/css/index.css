@@ -54,11 +54,14 @@ body {
 }
 
 .blocks span {
+    vertical-align: middle;
 }
 
 .blocks img {
     border-radius: 25px;
     max-height: 150px;
+    vertical-align: middle;
+    float: left;
 }
 
 section {
