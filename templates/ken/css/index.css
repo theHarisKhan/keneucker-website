@@ -184,3 +184,9 @@ hr.curl:before {
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
 }
+
+img.cs-logo {
+    max-height: 22px;
+    vertical-align: top;
+    margin-top: 3px;
+}
