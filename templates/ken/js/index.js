@@ -25,6 +25,9 @@ document.querySelector('body').onscroll = function(e) {
         badgeLine = document.querySelector('#badge-line'),
         isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
         atPosition = getOffset(badgeLine).top - 250;
+    if(document.querySelector('body').scrollTop == 0){
+        badge.classList.remove("fix-badge-top-corner");        
+    }
     if (document.querySelector('body').scrollTop > atPosition && !isPositionFixed) {
         badge.classList.add("fix-badge-top-corner");
     }
