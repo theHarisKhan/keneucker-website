@@ -30,8 +30,12 @@ document.querySelector('body').onscroll = function(e) {
     }
     if (document.querySelector('body').scrollTop > atPosition && !isPositionFixed) {
         badge.classList.add("fix-badge-top-corner");
+        badge.classList.add("slideRight");
+        badge.classList.remove("slideLeft");
     }
     else if (document.querySelector('body').scrollTop < atPosition && isPositionFixed){
         badge.classList.remove("fix-badge-top-corner");
+        badge.classList.remove("slideRight");
+        badge.classList.add("slideLeft");
     }
 };

@@ -160,17 +160,13 @@ img.cs-logo {
 
 .fix-badge-top-corner .badge img {
     max-width: 25%;
-     -webkit-transition: transform 0.7s ease-out;
-       -moz-transition: transform 0.7s ease-out;
-        -ms-transition: transform 0.7s ease-out;
-         -o-transition: transform 0.7s ease-out;
-            transition: transform 0.7s ease-out;
 }
 
 .fix-badge-top-corner {
     float: right;
-    /*right: 0;*/
     max-width: 10%;
+    -webkit-animation: slide-right 1.5s 1;
+    animation: slide-right 1.5s 1;
 }
 .fix-badge-top-corner .icons {
     max-width: 10%;
@@ -184,11 +180,6 @@ img.cs-logo {
     position: fixed;
     height: 100%;
     padding-top: 25px;
-     -webkit-transition: transform 0.7s ease-out;
-       -moz-transition: transform 0.7s ease-out;
-        -ms-transition: transform 0.7s ease-out;
-         -o-transition: transform 0.7s ease-out;
-            transition: transform 0.7s ease-out;
 }
 
 /* Bigger than 350 */
@@ -284,4 +275,117 @@ img.cs-logo {
     #badge {
         margin-left: 44%;
     }
+}
+
+/* Animation classes are from http://www.justinaguilar.com/animations/ */
+
+.slideRight{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: translateX(-2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}	
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-150%);
+	}
+	50%{
+		-webkit-transform: translateX(8%);
+	}
+	65%{
+		-webkit-transform: translateX(-4%);
+	}
+	80%{
+		-webkit-transform: translateX(4%);
+	}
+	95%{
+		-webkit-transform: translateX(-2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+
+.slideLeft{
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+	}
+	50%{
+		transform: translateX(-8%);
+	}
+	65%{
+		transform: translateX(4%);
+	}
+	80%{
+		transform: translateX(-4%);
+	}
+	95%{
+		transform: translateX(2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(150%);
+	}
+	50%{
+		-webkit-transform: translateX(-8%);
+	}
+	65%{
+		-webkit-transform: translateX(4%);
+	}
+	80%{
+		-webkit-transform: translateX(-4%);
+	}
+	95%{
+		-webkit-transform: translateX(2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
 }
