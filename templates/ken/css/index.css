@@ -152,21 +152,116 @@ hr.curl:before {
     background: linear-gradient(to bottom right, #021828, #0B5A97) no-repeat; /* Standard syntax */
 }
 
+img.cs-logo {
+    max-height: 22px;
+    vertical-align: top;
+    margin-top: 3px;
+}
 
-/* Bigger than 550 */
+.fix-badge-top-corner .badge img {
+    max-width: 25%;
+     -webkit-transition: transform 0.7s ease-out;
+       -moz-transition: transform 0.7s ease-out;
+        -ms-transition: transform 0.7s ease-out;
+         -o-transition: transform 0.7s ease-out;
+            transition: transform 0.7s ease-out;
+}
+
+.fix-badge-top-corner {
+    float: right;
+    /*right: 0;*/
+    max-width: 10%;
+}
+.fix-badge-top-corner .icons {
+    max-width: 10%;
+}
+
+#badge-line {
+    margin-bottom: 260px;
+}
+
+#badge {
+    position: fixed;
+    height: 100%;
+    padding-top: 25px;
+     -webkit-transition: transform 0.7s ease-out;
+       -moz-transition: transform 0.7s ease-out;
+        -ms-transition: transform 0.7s ease-out;
+         -o-transition: transform 0.7s ease-out;
+            transition: transform 0.7s ease-out;
+}
+
+/* Bigger than 350 */
+@media (min-width: 300px) {
+    .mongodb-logo {
+        max-width:290px;
+    }
+    .fix-badge-top-corner .badge img {
+        max-width: 75%;
+        margin-left: 0;   
+    }
+    #badge.fix-badge-top-corner {
+        right: 0;   
+    }
+    #badge {
+        margin-top: -75%;
+        margin-left: 100px;  
+    }
+}
+/* Bigger than 350 */
+@media (min-width: 350px) {
+    .mongodb-logo {
+        max-width:330px;
+    }
+    .fix-badge-top-corner .badge img {
+        max-width: 75%;
+        margin-left: 0;   
+    }
+    #badge.fix-badge-top-corner {
+        right: 0;   
+    }
+    #badge {
+        margin-top: -250px;
+        margin-left: 125px;  
+    }
+}
+
+/* Bigger than 420 */
 @media (min-width: 420px) {
     section {
         max-width: unset;        
         padding: 0 15px;
     }
+    .fix-badge-top-corner .badge img {
+        max-width: 45%;
+    }
+    #badge {
+        margin-left: 190px;  
+    }
 }
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
+    .mongodb-logo {
+        max-width:370px;
+    }
     section {
         max-width: 600px;
         padding: 0 5px;
         /*margin: auto;*/
+    }
+    .fix-badge-top-corner .badge img {
+        max-width: 35%;
+    }
+    #badge.fix-badge-top-corner {
+        right: 0;
+    }
+    
+    #badge {
+        top: 0;
+        margin-left: 40%;
+        margin-top: 25px;
+        padding-top: 25px;
     }
 }
 
@@ -179,14 +274,14 @@ hr.curl:before {
         left: 50%;
         position: absolute;*/
     }
+    #badge {
+        /*margin-left: 50%;*/
+    }
 }
 
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
-}
-
-img.cs-logo {
-    max-height: 22px;
-    vertical-align: top;
-    margin-top: 3px;
+    #badge {
+        margin-left: 44%;
+    }
 }

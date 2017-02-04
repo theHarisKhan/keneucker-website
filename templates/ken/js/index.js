@@ -11,3 +11,24 @@ function showBlock(target, a) {
         a.childNodes[0].className = "fa fa-arrow-down";
     }
 }
+
+function getOffset(el) {
+  el = el.getBoundingClientRect();
+  return {
+    left: el.left + window.scrollX,
+    top: el.top + window.scrollY
+  }
+}
+
+document.querySelector('body').onscroll = function(e) {
+    var badge = document.querySelector('#badge'),
+        badgeLine = document.querySelector('#badge-line'),
+        isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
+        atPosition = getOffset(badgeLine).top - 250;
+    if (document.querySelector('body').scrollTop > atPosition && !isPositionFixed) {
+        badge.classList.add("fix-badge-top-corner");
+    }
+    else if (document.querySelector('body').scrollTop < atPosition && isPositionFixed){
+        badge.classList.remove("fix-badge-top-corner");
+    }
+};
