@@ -228,9 +228,10 @@ img.cs-logo {
     }
     .fix-badge-top-corner .badge img {
         max-width: 45%;
+        margin-left: 5%;
     }
     #badge {
-        margin-left: 190px;  
+        /*margin-left: 190px;  */
     }
 }
 
@@ -245,7 +246,7 @@ img.cs-logo {
         /*margin: auto;*/
     }
     .fix-badge-top-corner .badge img {
-        max-width: 35%;
+        max-width: 55%;
     }
     #badge.fix-badge-top-corner {
         right: 0;
@@ -268,8 +269,8 @@ img.cs-logo {
         left: 50%;
         position: absolute;*/
     }
-    #badge {
-        /*margin-left: 50%;*/
+    .fix-badge-top-corner .badge img {
+        margin-left: -5%;
     }
 }
 
@@ -277,6 +278,9 @@ img.cs-logo {
 @media (min-width: 1000px) {
     #badge {
         margin-left: 44%;
+    }
+    .fix-badge-top-corner .badge img {
+        margin-left: -20%;
     }
 }
 
