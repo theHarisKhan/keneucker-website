@@ -4,11 +4,13 @@ function showBlock(target, a) {
         target.style.display = "";
         target.className = "fadeIn";
         a.childNodes[0].className = "fa fa-arrow-up";
+        a.childNodes[0].innerHTML = " Less";
     }
     else {
         target.className = "fadeOut";
         target.style.display = "none";
         a.childNodes[0].className = "fa fa-arrow-down";
+        a.childNodes[0].innerHTML = " More";
     }
 }
 
@@ -20,12 +22,14 @@ function getOffset(el) {
   }
 }
 
+var windowScrollCount = 0;
 window.onload = function() {
     window.onscroll = function() {
         var badge = document.querySelector('#badge'),
             badgeLine = document.querySelector('#badge-line'),
             isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
             atPosition = getOffset(badgeLine).top - 250;
+            console.log(windowScrollCount++);
 
         if(document.querySelector('body').scrollTop == 0){
             badge.classList.remove("fix-badge-top-corner");        
