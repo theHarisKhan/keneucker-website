@@ -28,18 +28,24 @@ window.onload = function() {
         var badge = document.querySelector('#badge'),
             badgeLine = document.querySelector('#badge-line'),
             isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
-            atPosition = getOffset(badgeLine).top - 250;
+            atPosition = getOffset(badgeLine).top - 250,
+            scrollPosition = document.querySelector('body').scrollTop;
             console.log(windowScrollCount++);
 
-        if(document.querySelector('body').scrollTop == 0){
+            // Firefox needs the window position, not the body
+            if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+                scrollPosition = document.querySelector('html').scrollTop;                
+            }
+
+        if(scrollPosition == 0){
             badge.classList.remove("fix-badge-top-corner");        
         }
-        if (document.querySelector('body').scrollTop > atPosition) {
+        if (scrollPosition > atPosition) {
             badge.classList.add("fix-badge-top-corner");
             badge.classList.add("slideRight");
             badge.classList.remove("slideLeft");
         }
-        else if (document.querySelector('body').scrollTop < atPosition && isPositionFixed){
+        else if (scrollPosition < atPosition && isPositionFixed){
             badge.classList.remove("fix-badge-top-corner");
             badge.classList.remove("slideRight");
             badge.classList.add("slideLeft");
@@ -60,6 +66,11 @@ function scrollTo(element, to, duration) {
 }
 
 document.querySelector('#badge').addEventListener('click', function() {
+    var body = document.body;
     //scroll to top
-    scrollTo(document.body, 0, 600);
+    // Firefox needs to scroll the window, not the body
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+        body = document.querySelector('html');                
+    }
+    scrollTo(body, 0, 600);
 });
