@@ -51,6 +51,7 @@ body {
 
 .bubbles img {
     max-height: 150px;
+    max-width: 250px;
 }
 
 .blocks span {
@@ -183,10 +184,15 @@ img.cs-logo {
 #badge {
     position: fixed;
     padding-top: 25px;
+    margin-top: -250px;
+    margin-left: 65px;
 }
 
-/* Bigger than 350 */
-@media (min-width: 300px) {
+
+
+/* Bigger than 320 */
+ /* iPhone 5 @ 320 x 568 */
+@media (min-width: 320px) {
     .mongodb-logo {
         max-width:290px;
     }
@@ -199,11 +205,13 @@ img.cs-logo {
     }
     #badge {
         margin-top: -75%;
-        margin-left: 100px;  
+        margin-left: 90px;  
     }
 }
+
 /* Bigger than 350 */
-@media (min-width: 350px) {
+ /* Galaxy S5 5 @ 360 x 640 */
+@media (min-width: 360px) {
     .mongodb-logo {
         max-width:330px;
     }
@@ -216,12 +224,23 @@ img.cs-logo {
     }
     #badge {
         margin-top: -250px;
-        margin-left: 125px;  
+        margin-left: 110px;  
     }
 }
 
-/* Bigger than 420 */
-@media (min-width: 420px) {
+/* Bigger than 350 */
+ /* iPhone 6 @ 375 x 667 */
+@media (min-width: 375px) {
+    #badge {
+        margin-left: 115px;  
+    }
+}
+
+/* Bigger than 412 */
+ /* Nexus 5X @ 412 x 732 */
+ /* Nexus 6P @ 412 x 732 */
+ /* iPhone 6 Plus @ 414 x 736 */
+@media (min-width: 412px) {
     section {
         max-width: unset;        
         padding: 0 15px;
@@ -231,7 +250,7 @@ img.cs-logo {
         margin-left: 5%;
     }
     #badge {
-        /*margin-left: 190px;  */
+        margin-left: 140px;
     }
 }
 
@@ -274,10 +293,22 @@ img.cs-logo {
     }
 }
 
-/* Bigger than 1000 */
-@media (min-width: 1000px) {
+/* Bigger than 768 */
+ /* iPad @ 768 x 1024 */
+@media (min-width: 768px) {
     #badge {
-        margin-left: 44%;
+        margin-left: 43%;
+    }
+    .fix-badge-top-corner .badge img {
+        margin-left: -20%;
+    }
+}
+
+/* Bigger than 1024 */
+ /* iPad @ 1024 X 1366 */
+@media (min-width: 1024px) {
+    #badge {
+        margin-left: 46%;
     }
     .fix-badge-top-corner .badge img {
         margin-left: -20%;
