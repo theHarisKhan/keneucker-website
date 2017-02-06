@@ -305,8 +305,18 @@ img.cs-logo {
 }
 
 /* Bigger than 1024 */
- /* iPad @ 1024 X 1366 */
+ /* iPad Pro @ 1024 X 1366 */
 @media (min-width: 1024px) {
+    #badge {
+        margin-left: 44%;
+    }
+    .fix-badge-top-corner .badge img {
+        margin-left: -20%;
+    }
+}
+
+/* Bigger than 1204 */
+@media (min-width: 1240px) {
     #badge {
         margin-left: 46%;
     }
