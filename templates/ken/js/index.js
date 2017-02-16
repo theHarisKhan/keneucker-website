@@ -38,7 +38,7 @@ window.onload = function() {
             }
 
         if(scrollPosition == 0){
-            badge.classList.remove("fix-badge-top-corner");        
+            badge.classList.remove("fix-badge-top-corner");   
         }
         if (scrollPosition > atPosition) {
             badge.classList.add("fix-badge-top-corner");
@@ -49,6 +49,12 @@ window.onload = function() {
             badge.classList.remove("fix-badge-top-corner");
             badge.classList.remove("slideRight");
             badge.classList.add("slideLeft");
+            var igShowing = document.querySelector(".ig-view-showing");
+            if(igShowing) {
+                igShowing.classList.add("ig-view");
+                igShowing.classList.remove("ig-view-showing");
+                document.querySelector(".ig-overlay").classList.remove("hidden");
+            }
         }
     }
 };
@@ -74,3 +80,9 @@ document.querySelector('#badge').addEventListener('click', function() {
     }
     scrollTo(body, 0, 600);
 });
+
+document.querySelector('.ig-overlay').onclick = function() {
+    document.querySelector('.ig-view').classList.add('ig-view-showing');
+    document.querySelector('.ig-view').classList.remove('ig-view');
+    document.querySelector('.ig-overlay').classList.add("hidden");
+};
