@@ -192,7 +192,7 @@ img.cs-logo {
 .ig-view {
     overflow: hidden;
     height: 100px;
-    border-radius: 25%;
+    max-width: 100px;
 }
 
 .ig-view-showing {
@@ -201,12 +201,12 @@ img.cs-logo {
 
 .ig-overlay {
     height: 100px;
-    width: 200px;
     position: absolute;
     z-index: 999;
-    margin-left: -50px;
+    text-align: center;
     cursor: pointer;
-    font-size: 4em;
+    font-size: 6em;
+    text-align: center;
 }
 
 .hidden {
@@ -229,6 +229,12 @@ img.cs-logo {
     #badge {
         margin-top: -75%;
         margin-left: 90px;  
+    }
+    .ig-view {
+        max-width: 150px;
+    }
+    .ig-overlay {
+        width: 150px;
     }
 }
 
@@ -275,6 +281,12 @@ img.cs-logo {
     #badge {
         margin-left: 140px;
     }
+    .ig-view {
+        max-width: 200px;
+    }
+    .ig-overlay {
+        width: 200px;
+    }
 }
 
 /* Bigger than 550 */
@@ -315,8 +327,11 @@ img.cs-logo {
         margin-left: -5%;
     }
     .ig-view {
-        max-width: 100px;
+        max-width: 250px;
         max-height: 100px;
+    }
+    .ig-overlay {
+        width: 250px;
     }
 }
 
@@ -328,6 +343,12 @@ img.cs-logo {
     }
     .fix-badge-top-corner .badge img {
         margin-left: -20%;
+    }
+    .ig-view {
+        max-width: 350px;
+    }
+    .ig-overlay {
+        width: 350px;
     }
 }
 
@@ -349,6 +370,10 @@ img.cs-logo {
     }
     .fix-badge-top-corner .badge img {
         margin-left: -20%;
+    }
+    .ig-overlay {
+        width: 400px;
+        border-radius: unset; 
     }
 }
 
