@@ -317,7 +317,7 @@ img.cs-logo {
 /* Bigger than 750 */
 @media (min-width: 650px) {
     section {
-        width: 700px;
+        width: 650px;
         padding: unset;
         /*margin-left: -250px;
         left: 50%;
@@ -338,8 +338,11 @@ img.cs-logo {
 /* Bigger than 768 */
  /* iPad @ 768 x 1024 */
 @media (min-width: 768px) {
+    section {
+        width: 750px;
+    }
     #badge {
-        margin-left: 43%;
+        margin-left: 41%;
     }
     .fix-badge-top-corner .badge img {
         margin-left: -20%;
@@ -356,7 +359,7 @@ img.cs-logo {
  /* iPad Pro @ 1024 X 1366 */
 @media (min-width: 1024px) {
     #badge {
-        margin-left: 44%;
+        margin-left: 43%;
     }
     .fix-badge-top-corner .badge img {
         margin-left: -20%;
@@ -366,14 +369,49 @@ img.cs-logo {
 /* Bigger than 1204 */
 @media (min-width: 1240px) {
     #badge {
-        margin-left: 46%;
+        margin-left: 45%;
     }
     .fix-badge-top-corner .badge img {
         margin-left: -20%;
     }
     .ig-overlay {
-        width: 400px;
-        border-radius: unset; 
+        width: 450px;
+    }
+    .ig-view {
+        max-width: 450px;
+    }
+}
+
+/* Bigger than 1900 */
+@media (min-width: 1900px) {
+    #badge {
+        margin-left: 46%;
+    }
+    section {
+        max-width: 900px;
+    }
+    .ig-overlay {
+        width: 550px;
+    }
+    .ig-view {
+        max-width: 550px;
+    }
+}
+
+/* Bigger than 1900 */
+/* 4K */
+@media (min-width: 3800px) {
+    #badge {
+        margin-left: 48%;
+    }
+    section {
+        width: 1200px;
+    }
+    .ig-overlay {
+        width: 375px;
+    }
+    .ig-view {
+        max-width: 750px;
     }
 }
 
