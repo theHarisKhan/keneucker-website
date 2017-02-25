@@ -22,41 +22,43 @@ function getOffset(el) {
   }
 }
 
-var windowScrollCount = 0;
-window.onload = function() {
-    window.onscroll = function() {
-        var badge = document.querySelector('#badge'),
-            badgeLine = document.querySelector('#badge-line'),
-            isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
-            atPosition = getOffset(badgeLine).top - 250,
-            scrollPosition = document.querySelector('body').scrollTop;
-            console.log(windowScrollCount++);
+function onScrollMoveBadge() {
+    var badge = document.querySelector('#badge'),
+        badgeLine = document.querySelector('#badge-line'),
+        isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
+        atPosition = getOffset(badgeLine).top - 250,
+        scrollPosition = document.querySelector('body').scrollTop;
+        console.log(windowScrollCount++);
 
-            // Firefox needs the window position, not the body
-            if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
-                scrollPosition = document.querySelector('html').scrollTop;                
-            }
+        // Firefox needs the window position, not the body
+        if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+            scrollPosition = document.querySelector('html').scrollTop;                
+        }
 
-        if(scrollPosition == 0){
-            badge.classList.remove("fix-badge-top-corner");   
-        }
-        if (scrollPosition > atPosition) {
-            badge.classList.add("fix-badge-top-corner");
-            badge.classList.add("slideRight");
-            badge.classList.remove("slideLeft");
-        }
-        else if (scrollPosition < atPosition && isPositionFixed){
-            badge.classList.remove("fix-badge-top-corner");
-            badge.classList.remove("slideRight");
-            badge.classList.add("slideLeft");
-            var igShowing = document.querySelector(".ig-view-showing");
-            if(igShowing) {
-                igShowing.classList.add("ig-view");
-                igShowing.classList.remove("ig-view-showing");
-                document.querySelector(".ig-overlay").classList.remove("hidden");
-            }
+    if(scrollPosition == 0){
+        badge.classList.remove("fix-badge-top-corner");   
+    }
+    if (scrollPosition > atPosition) {
+        badge.classList.add("fix-badge-top-corner");
+        badge.classList.add("slideRight");
+        badge.classList.remove("slideLeft");
+    }
+    else if (scrollPosition < atPosition && isPositionFixed){
+        badge.classList.remove("fix-badge-top-corner");
+        badge.classList.remove("slideRight");
+        badge.classList.add("slideLeft");
+        var igShowing = document.querySelector(".ig-view-showing");
+        if(igShowing) {
+            igShowing.classList.add("ig-view");
+            igShowing.classList.remove("ig-view-showing");
+            document.querySelector(".ig-overlay").classList.remove("hidden");
         }
     }
+}
+
+var windowScrollCount = 0;
+window.onload = function() {
+    window.onscroll = onScrollMoveBadge;
 };
 
 function scrollTo(element, to, duration) {
@@ -72,13 +74,18 @@ function scrollTo(element, to, duration) {
 }
 
 document.querySelector('#badge').addEventListener('click', function() {
-    var body = document.body;
+    var body = document.body,
+        badge = document.querySelector('#badge');
     //scroll to top
     // Firefox needs to scroll the window, not the body
     if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
         body = document.querySelector('html');                
     }
+
     scrollTo(body, 0, 600);
+    badge.classList.add("fix-badge-top-corner");
+    badge.classList.remove("slideLeft");
+    badge.classList.add("slideRight");
 });
 
 document.querySelector('.ig-overlay').onclick = function() {
