@@ -27,7 +27,12 @@ body {
 }
 
 #banner h1 {
-    font-size: 3em;    
+    font-size: 3rem;    
+}
+
+h1, h2 {
+    text-shadow: 0 0 0.15em #0F4A78, 0 0 0.12em #0B5A97;
+    color: #021828;
 }
 
 .icons {
@@ -549,6 +554,14 @@ img.badge-icon {
         margin-top: 25px;
         padding-top: 25px;
     }
+
+    h2 {
+        font-size: 5.2rem;
+    }
+    #banner h1 {
+        font-size: 6rem;    
+    }
+
 }
 
 /* Bigger than 750 */
