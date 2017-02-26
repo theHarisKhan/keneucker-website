@@ -14,6 +14,15 @@ function showBlock(target, a) {
     }
 }
 
+function hideMore(target, a) {
+    var target = document.querySelector(target), 
+        a = document.querySelector(a);
+    target.className = "fadeOut";
+    target.style.display = "none";
+    a.childNodes[0].className = "fa fa-arrow-down";
+    a.childNodes[0].innerHTML = " More";
+}
+
 function getOffset(el) {
   el = el.getBoundingClientRect();
   return {
@@ -24,8 +33,8 @@ function getOffset(el) {
 
 function onScrollMoveBadge() {
     var badge = document.querySelector('#badge'),
-        badgeLine = document.querySelector('#badge-line'),
         isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
+        badgeLine = document.querySelector('#badge-line'),
         atPosition = getOffset(badgeLine).top - 250,
         scrollPosition = document.querySelector('body').scrollTop;
         console.log(windowScrollCount++);
@@ -47,6 +56,11 @@ function onScrollMoveBadge() {
         badge.classList.remove("fix-badge-top-corner");
         badge.classList.remove("slideRight");
         badge.classList.add("slideLeft");
+
+        hideMore("#more-why","#why a.expander");
+        hideMore("#more-who","#who a.expander");
+        hideMore("#more-what","#what a.expander");
+
         var igShowing = document.querySelector(".ig-view-showing");
         if(igShowing) {
             igShowing.classList.add("ig-view");
@@ -75,7 +89,13 @@ function scrollTo(element, to, duration) {
 
 document.querySelector('#badge').addEventListener('click', function() {
     var body = document.body,
-        badge = document.querySelector('#badge');
+        badge = document.querySelector('#badge'),
+        scrollPosition = document.querySelector('body').scrollTop;
+
+        if(scrollPosition == 0) {
+            return;
+        }
+        
     //scroll to top
     // Firefox needs to scroll the window, not the body
     if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){

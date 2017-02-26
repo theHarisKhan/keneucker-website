@@ -228,6 +228,10 @@ img.badge-icon {
     font-style: italic;
 }
 
+.expander {
+    cursor: pointer;
+}
+
 /* Animation classes are from http://www.justinaguilar.com/animations/ */
 
 .slideRight .badge{
@@ -749,7 +753,7 @@ img.badge-icon {
     }
 }
 
-/* Bigger than 1204 */
+/* Bigger than 1240 */
 @media (min-width: 1240px) {
     #badge {
         margin-left: 45%;
@@ -762,6 +766,79 @@ img.badge-icon {
     }
     .ig-view {
         max-width: 450px;
+    }
+    @keyframes slideRightAndScaleDown {
+        0% {
+            transform: scale(1.99) translate(calc(-180%), calc(25%));
+        }
+        100% {
+            transform: scale(1) translateX(0%);
+        }	
+    }
+
+    @-webkit-keyframes slideRightAndScaleDown {
+        0% {
+            transform: scale(1.99) translate(calc(-180%), calc(25%));
+        }			
+        100% {
+            transform: scale(1) translateX(0%);
+        }	
+    }
+
+
+    @keyframes slideRightAndRotateCounterClockwise {
+        0% {
+            transform: rotate(90deg) translate(calc(10%), calc(294%));
+        }			
+        100% {
+            transform: rotate(0) translateX(0%);
+        }	
+    }
+
+
+    @-webkit-keyframes slideRightAndRotateCounterClockwise {
+        0% {
+            transform: rotate(90deg) translate(calc(10%), calc(294%));
+        }			
+        100% {
+            transform: rotate(0) translateX(0%);
+        }	
+    }
+
+    @keyframes slideLeftAndRotateClockwise {
+        0% {
+            transform: rotate(-90deg) translate(10%, 1550%);
+        }
+        100% {
+            transform: rotate(0deg) translateX(0%);
+        }
+    }
+
+    @-webkit-keyframes slideLeftAndRotateClockwise {
+        0% {
+            transform: rotate(-90deg) translate(48%, 45%);
+        }
+        100% {
+            transform: rotate(0deg) translateX(0%);
+        }
+    }
+
+    @keyframes slideLeftAndScaleUp {
+        0% {
+            transform: scale(0.50) translate(750%, -50%);
+        }
+        100% {
+            transform: scale(1) translateX(0%);
+        }
+    }
+
+    @-webkit-keyframes slideLeftAndScaleUp {
+        0% {
+            transform: scale(0.50) translate(600%, -220%);
+        }
+        100% {
+            transform: scale(1) translateX(0%);
+        }
     }
 }
 
