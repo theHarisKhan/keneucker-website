@@ -27,12 +27,18 @@ body {
 }
 
 #banner h1 {
-    font-size: 3rem;    
+    font-size: 4rem;    
 }
 
 h1, h2 {
-    text-shadow: 0 0 0.15em #0F4A78, 0 0 0.12em #0B5A97;
-    color: #021828;
+    color: transparent;
+    text-shadow: 2px 3px 2px #0F4A78, -2px 2px 2px #0B5A97;
+    /*border-radius: 2rem; */
+    background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(205, 228, 245);
 }
 
 .icons {
@@ -529,6 +535,14 @@ img.badge-icon {
     .current-role img {
         max-width: 250px;
     }
+    #banner h1 {
+        font-size: 5rem;    
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
 }
 
 /* Bigger than 550 */
@@ -556,10 +570,10 @@ img.badge-icon {
     }
 
     h2 {
-        font-size: 5.2rem;
+        font-size: 6rem;
     }
     #banner h1 {
-        font-size: 6rem;    
+        font-size: 7rem;    
     }
 
 }
