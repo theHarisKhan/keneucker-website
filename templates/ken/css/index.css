@@ -660,7 +660,7 @@ img.badge-icon {
 
     @-webkit-keyframes slideLeftAndScaleUp {
         0% {
-            transform: scale(0.28) translate(600%, -220%);
+            transform: scale(0.28) translate(780%, -130%);
         }
         100% {
             transform: scale(1) translateX(0%);
@@ -745,7 +745,7 @@ img.badge-icon {
 
     @-webkit-keyframes slideLeftAndScaleUp {
         0% {
-            transform: scale(0.18) translate(600%, -220%);
+            transform: scale(0.18) translate(1600%, -150%);
         }
         100% {
             transform: scale(1) translateX(0%);
@@ -816,7 +816,7 @@ img.badge-icon {
 
     @-webkit-keyframes slideLeftAndRotateClockwise {
         0% {
-            transform: rotate(-90deg) translate(48%, 45%);
+            transform: rotate(-90deg) translate(10%, 1550%);
         }
         100% {
             transform: rotate(0deg) translateX(0%);
@@ -834,7 +834,7 @@ img.badge-icon {
 
     @-webkit-keyframes slideLeftAndScaleUp {
         0% {
-            transform: scale(0.50) translate(600%, -220%);
+            transform: scale(0.50) translate(750%, -50%);
         }
         100% {
             transform: scale(1) translateX(0%);
