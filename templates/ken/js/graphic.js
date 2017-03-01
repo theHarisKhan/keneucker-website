@@ -199,10 +199,7 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 	}
 	
 	function draw() {
-        var fps = 90;
-        setTimeout(function() {
-            requestAnimationFrame(draw);
-
+        timer = setTimeout(function() {
             var i,j;
             var c;
             var rad;
@@ -249,9 +246,12 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
                     yOffset = 40*Math.sin(c.globalPhase + drawCount/1000*TWO_PI);
                     //stop when off screen
                     if (c.centerX > displayWidth + maxMaxRad) {
-                        clearInterval(timer);
+                        clearTimeout(timer);
                         timer = null;
-                    }			
+                    }
+                    else {
+                        requestAnimationFrame(draw);
+                    }
                     
                     //we are drawing in new position by applying a transform. We are doing this so the gradient will move with the drawing.
                     context.setTransform(xSqueeze,0,0,1,c.centerX,c.centerY+yOffset)
@@ -276,7 +276,7 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
                         
                 }
             }
-        }, 1000 / fps);            
+        }, 1000 / 15);            
 	}
 		
 	//Here is the function that defines a noisy (but not wildly varying) data set which we will use to draw the curves.
