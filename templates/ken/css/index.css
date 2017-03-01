@@ -204,6 +204,12 @@ img.badge-icon {
     vertical-align: middle;
 }
 
+canvas#displayCanvas {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
 .current-role img {
     border-radius: 20px;
 }
