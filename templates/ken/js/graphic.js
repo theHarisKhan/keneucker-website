@@ -1,5 +1,31 @@
 /// Modified from http://rectangleworld.com/demos/MorphingCurve/MorphingCurve_RadialGradient.html 
 
+// RAF polyfill
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
+                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+ 
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+ 
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
+
 window.addEventListener("load", windowLoadHandler, false);
 
 //for debug messages while testing code
@@ -100,6 +126,26 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 		startGenerate();
 	}
 	
+    function animLoop( render, element ) {
+        var running, lastFrame = +new Date,
+            raf = window.mozRequestAnimationFrame    ||
+                window.webkitRequestAnimationFrame ||
+                window.msRequestAnimationFrame     ||
+                window.oRequestAnimationFrame;
+        function loop( now ) {
+            // stop the loop if render returned false
+            if ( running !== false ) {
+                raf( loop, element );
+                var deltaT = now - lastFrame;
+                if ( deltaT < 160 ) {
+                    running = render( deltaT );
+                }
+                lastFrame = now;
+            }
+        }
+        loop( lastFrame );
+    }
+
 	function startGenerate() {
 		drawCount = 0;
 		context.setTransform(1,0,0,1,0,0);
@@ -107,9 +153,7 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 		context.clearRect(0,0,displayWidth,displayHeight);
 		
 		setCircles();
-		
-		if(timer) {clearInterval(timer);}
-		timer = setInterval(onTimer,1000/50);
+        draw();
 	}
 	
 	function setCircles() {
@@ -154,80 +198,85 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 		}
 	}
 	
-	function onTimer() {
-		var i,j;
-		var c;
-		var rad;
-		var point1,point2;
-		var x0,y0;
-		var cosParam;
-		
-		var xSqueeze = 0.75; //cheap 3D effect by shortening in x direction.
-		
-		var yOffset;
-		
-		//draw circles
-		for (j = 0; j < drawsPerFrame; j++) {
-			
-			drawCount++;
-			
-			for (i = 0; i < numCircles; i++) {
-				c = circles[i];
-				c.param += c.changeSpeed;
-				if (c.param >= 1) {
-					c.param = 0;
-					
-					c.pointList1 = c.pointList2;
-					c.pointList2 = setLinePoints(iterations);
-				}
-				cosParam = 0.5-0.5*Math.cos(Math.PI*c.param);
-				
-				context.strokeStyle = c.color;
-				context.lineWidth = lineWidth;
-				//context.fillStyle = c.fillColor;
-				context.beginPath();
-				point1 = c.pointList1.first;
-				point2 = c.pointList2.first;
-				
-				//slowly rotate
-				c.phase += 0.0002;
-				
-				theta = c.phase;
-				rad = c.minRad + (point1.y + cosParam*(point2.y-point1.y))*(c.maxRad - c.minRad);
-				
-				//move center
-				c.centerX += 0.5;
-				c.centerY += 0.04;
-				yOffset = 40*Math.sin(c.globalPhase + drawCount/1000*TWO_PI);
-				//stop when off screen
-				if (c.centerX > displayWidth + maxMaxRad) {
-					clearInterval(timer);
-					timer = null;
-				}			
-				
-				//we are drawing in new position by applying a transform. We are doing this so the gradient will move with the drawing.
-				context.setTransform(xSqueeze,0,0,1,c.centerX,c.centerY+yOffset)
-				
-				//Drawing the curve involves stepping through a linked list of points defined by a fractal subdivision process.
-				//It is like drawing a circle, except with varying radius.
-				x0 = xSqueeze*rad*Math.cos(theta);
-				y0 = rad*Math.sin(theta);
-				context.lineTo(x0, y0);
-				while (point1.next != null) {
-					point1 = point1.next;
-					point2 = point2.next;
-					theta = TWO_PI*(point1.x + cosParam*(point2.x-point1.x)) + c.phase;
-					rad = c.minRad + (point1.y + cosParam*(point2.y-point1.y))*(c.maxRad - c.minRad);
-					x0 = xSqueeze*rad*Math.cos(theta);
-					y0 = rad*Math.sin(theta);
-					context.lineTo(x0, y0);
-				}
-				context.closePath();
-				context.stroke();
-				//context.fill();		
-					
-			}
-		}
+	function draw() {
+        var fps = 90;
+        setTimeout(function() {
+            requestAnimationFrame(draw);
+
+            var i,j;
+            var c;
+            var rad;
+            var point1,point2;
+            var x0,y0;
+            var cosParam;
+            
+            var xSqueeze = 0.75; //cheap 3D effect by shortening in x direction.
+            
+            var yOffset;
+            
+            //draw circles
+            for (j = 0; j < drawsPerFrame; j++) {
+                
+                drawCount++;
+                
+                for (i = 0; i < numCircles; i++) {
+                    c = circles[i];
+                    c.param += c.changeSpeed;
+                    if (c.param >= 1) {
+                        c.param = 0;
+                        
+                        c.pointList1 = c.pointList2;
+                        c.pointList2 = setLinePoints(iterations);
+                    }
+                    cosParam = 0.5-0.5*Math.cos(Math.PI*c.param);
+                    
+                    context.strokeStyle = c.color;
+                    context.lineWidth = lineWidth;
+                    //context.fillStyle = c.fillColor;
+                    context.beginPath();
+                    point1 = c.pointList1.first;
+                    point2 = c.pointList2.first;
+                    
+                    //slowly rotate
+                    c.phase += 0.0002;
+                    
+                    theta = c.phase;
+                    rad = c.minRad + (point1.y + cosParam*(point2.y-point1.y))*(c.maxRad - c.minRad);
+                    
+                    //move center
+                    c.centerX += 0.5;
+                    c.centerY += 0.04;
+                    yOffset = 40*Math.sin(c.globalPhase + drawCount/1000*TWO_PI);
+                    //stop when off screen
+                    if (c.centerX > displayWidth + maxMaxRad) {
+                        clearInterval(timer);
+                        timer = null;
+                    }			
+                    
+                    //we are drawing in new position by applying a transform. We are doing this so the gradient will move with the drawing.
+                    context.setTransform(xSqueeze,0,0,1,c.centerX,c.centerY+yOffset)
+                    
+                    //Drawing the curve involves stepping through a linked list of points defined by a fractal subdivision process.
+                    //It is like drawing a circle, except with varying radius.
+                    x0 = xSqueeze*rad*Math.cos(theta);
+                    y0 = rad*Math.sin(theta);
+                    context.lineTo(x0, y0);
+                    while (point1.next != null) {
+                        point1 = point1.next;
+                        point2 = point2.next;
+                        theta = TWO_PI*(point1.x + cosParam*(point2.x-point1.x)) + c.phase;
+                        rad = c.minRad + (point1.y + cosParam*(point2.y-point1.y))*(c.maxRad - c.minRad);
+                        x0 = xSqueeze*rad*Math.cos(theta);
+                        y0 = rad*Math.sin(theta);
+                        context.lineTo(x0, y0);
+                    }
+                    context.closePath();
+                    context.stroke();
+                    //context.fill();		
+                        
+                }
+            }
+        }, 1000 / fps);            
 	}
 		
 	//Here is the function that defines a noisy (but not wildly varying) data set which we will use to draw the curves.
@@ -325,10 +374,5 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 		//copy the image into the empty img in the newly opened window:
 		var exportImage = imageWindow.document.getElementById("exportImage");
 		exportImage.src = dataURL;
-	}
-	
-	//function regeneratePressed(evt) {
-		startGenerate();
-	//}
-	
+	}	
 }
