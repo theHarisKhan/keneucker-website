@@ -12,6 +12,7 @@ app.use("/assets", function(req, res) {
     res.sendFile(path.join(__dirname, "assets/", req.url));
 });
 app.use(express.static(path.join(__dirname + '/templates/ken/')));
+app.use(express.static(path.join(__dirname + '/quasi.io/')));
 
 app.listen(port, function () {
     console.log("App listening on: http://localhost:" + port);
