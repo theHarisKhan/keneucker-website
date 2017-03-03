@@ -92,6 +92,54 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 	var TWO_PI = 2*Math.PI;
 	var lineWidth;
 	
+	var stop = false;
+	var frameCount = 0;
+	var fps, fpsInterval, startTime, now, then, elapsed;
+
+	function startAnimating(fps) {
+		fpsInterval = 1000 / fps;
+		then = Date.now();
+		startTime = then;
+		console.log(startTime);
+		animate();
+	}
+
+
+	function animate() {
+
+		// stop
+		if (stop) {
+			return;
+		}
+
+		// request another frame
+
+		requestAnimationFrame(animate);
+
+		// calc elapsed time since last loop
+
+		now = Date.now();
+		elapsed = now - then;
+
+		// if enough time has elapsed, draw the next frame
+
+		if (elapsed > fpsInterval) {
+
+			// Get ready for next frame by setting then=now, but...
+			// Also, adjust for fpsInterval not being multiple of 16.67
+			then = now - (elapsed % fpsInterval);
+
+			// draw stuff here
+			draw();
+
+			// TESTING...Report #seconds since start and achieved fps.
+			// var sinceStart = now - startTime;
+			// var currentFps = Math.round(1000 / (sinceStart / ++frameCount) * 100) / 100;
+			// $results.text("Elapsed time= " + Math.round(sinceStart / 1000 * 100) / 100 + " secs @ " + currentFps + " fps.");
+
+		}
+	}
+
 	init();
 	
 	function init() {
@@ -122,8 +170,15 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 		urlColor = "#EEEEEE";
 		
 		lineWidth = 1.01;
+
+		drawCount = 0;
+		context.setTransform(1,0,0,1,0,0);
 		
-		startGenerate();
+		context.clearRect(0,0,displayWidth,displayHeight);
+		
+		setCircles();
+		
+        startAnimating(10);
 	}
 	
     function animLoop( render, element ) {
@@ -145,16 +200,6 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
         }
         loop( lastFrame );
     }
-
-	function startGenerate() {
-		drawCount = 0;
-		context.setTransform(1,0,0,1,0,0);
-		
-		context.clearRect(0,0,displayWidth,displayHeight);
-		
-		setCircles();
-        draw();
-	}
 	
 	function setCircles() {
 		var i;
@@ -199,7 +244,7 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 	}
 	
 	function draw() {
-        timer = setTimeout(function() {
+        //timer = setTimeout(function() {
             var i,j;
             var c;
             var rad;
@@ -246,11 +291,9 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
                     yOffset = 40*Math.sin(c.globalPhase + drawCount/1000*TWO_PI);
                     //stop when off screen
                     if (c.centerX > displayWidth + maxMaxRad) {
-                        clearTimeout(timer);
-                        timer = null;
-                    }
-                    else {
-                        requestAnimationFrame(draw);
+                        // clearTimeout(timer);
+                        // timer = null;
+						return;
                     }
                     
                     //we are drawing in new position by applying a transform. We are doing this so the gradient will move with the drawing.
@@ -276,7 +319,8 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
                         
                 }
             }
-        }, 1000 / 15);            
+        //}, 1000 / 15);    
+        requestAnimationFrame(draw);        
 	}
 		
 	//Here is the function that defines a noisy (but not wildly varying) data set which we will use to draw the curves.
