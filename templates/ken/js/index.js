@@ -113,3 +113,14 @@ document.querySelector('.ig-overlay').onclick = function() {
     document.querySelector('.ig-view').classList.remove('ig-view');
     document.querySelector('.ig-overlay').classList.add("hidden");
 };
+
+// function reverseOrderOfChildren(selector) {
+// 	var children = document.querySelectorAll(selector);
+//   	for(var i = children.length - 1, j = 1; i >= 0; i--,j++) {
+//     	children[i].style.boxOrdinalGroup = j;
+//     	children[i].style.mozBoxOrdinalGroup = j;
+//     	children[i].style.webkitBoxOrdinalGroup = j;
+//     }
+// }
+
+// reverseOrderOfChildren('#badge .icons > a');
