@@ -59,7 +59,7 @@ h1, h2 {
 
 .badge img {
     max-height: 150px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 .bubbles img {
