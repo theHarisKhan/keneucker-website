@@ -87,7 +87,7 @@ function scrollTo(element, to, duration) {
 document.querySelector('#badge').addEventListener('click', function() {
     var body = document.body,
         badge = document.querySelector('#badge'),
-        scrollPosition = document.querySelector('body').scrollTop;
+        scrollPosition = document.querySelector('html').scrollTop;                
 
         if(scrollPosition == 0) {
             return;
