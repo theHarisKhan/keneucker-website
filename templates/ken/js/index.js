@@ -39,10 +39,7 @@ function onScrollMoveBadge() {
         scrollPosition = document.querySelector('body').scrollTop;
         console.log(windowScrollCount++);
 
-        // Firefox needs the window position, not the body
-        if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
-            scrollPosition = document.querySelector('html').scrollTop;                
-        }
+        scrollPosition = document.querySelector('html').scrollTop;                
 
     if(scrollPosition == 0){
         badge.classList.remove("fix-badge-top-corner");   
@@ -90,7 +87,7 @@ function scrollTo(element, to, duration) {
 document.querySelector('#badge').addEventListener('click', function() {
     var body = document.body,
         badge = document.querySelector('#badge'),
-        scrollPosition = document.querySelector('body').scrollTop;
+        scrollPosition = document.querySelector('html').scrollTop;                
 
         if(scrollPosition == 0) {
             return;
