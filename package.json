@@ -10,10 +10,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KenEucker/moltensteelman-website.git"
+    "url": "https://github.com/KenEucker/keneucker-website.git"
   },
   "bugs": {
-    "url": "https://github.com/KenEucker/moltensteelman-website/issues"
+    "url": "https://github.com/KenEucker/keneucker-website/issues"
   },
   "keywords": [],
   "dependencies": {
