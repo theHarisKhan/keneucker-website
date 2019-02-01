@@ -69,24 +69,12 @@ function onScrollMoveBadge() {
 
 var windowScrollCount = 0;
 window.onload = function() {
-    window.onscroll = onScrollMoveBadge;
+    window.addEventListener('scroll', onScrollMoveBadge);
 };
 
-function scrollTo(element, to, duration) {
-  if (duration <= 0) return;
-  var difference = to - element.scrollTop;
-  var perTick = difference / duration * 10;
-
-  setTimeout(function() {
-    element.scrollTop = element.scrollTop + perTick;
-    if (element.scrollTop == to) return;
-    scrollTo(element, to, duration - 10);
-  }, 10);
-}
-
 document.querySelector('#badge').addEventListener('click', function() {
-    var body = document.body,
-        badge = document.querySelector('#badge'),
+    var badge = document.querySelector('#badge'),
+        topOfPageElement = document.getElementById("top"),
         scrollPosition = document.querySelector('html').scrollTop;                
 
         if(scrollPosition == 0) {
@@ -99,10 +87,17 @@ document.querySelector('#badge').addEventListener('click', function() {
         body = document.querySelector('html');                
     }
 
-    document.getElementById("top").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-    badge.classList.add("fix-badge-top-corner");
-    badge.classList.remove("slideLeft");
-    badge.classList.add("slideRight");
+    if (topOfPageElement) {
+        topOfPageElement.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    } else {
+        console.log('what even is the top of the page?')
+    }
+
+    if (badge) {
+        badge.classList.add("fix-badge-top-corner");
+        badge.classList.remove("slideLeft");
+        badge.classList.add("slideRight");
+    }
 });
 
 // function reverseOrderOfChildren(selector) {
