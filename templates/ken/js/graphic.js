@@ -26,8 +26,6 @@
         };
 }());
 
-window.addEventListener("load", windowLoadHandler, false);
-
 //for debug messages while testing code
 var Debugger = function() { };
 Debugger.log = function(message) {
@@ -39,11 +37,19 @@ Debugger.log = function(message) {
 	}
 }
 
-function windowLoadHandler() {
-    createGrowingCanvasGraphic("displayCanvas", window.innerWidth, window.innerHeight);
+var windowLoadHandler = function () {
+	var graphicsLoaded = false;
+
+	// if scrolled down at least once, run the animation
+    window.addEventListener('scroll', function () {
+		if (!graphicsLoaded) {
+			graphicsLoaded = true;
+			createGrowingCanvasGraphic("displayCanvas", window.innerWidth, window.innerHeight);
+		}
+	});
 }
 
-function createGrowingCanvasGraphic(id, width, height, orientation = "horizontal") {
+var createGrowingCanvasGraphic = function (id, width, height, orientation = "horizontal") {
     document.querySelector('html').attributes.class = "js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths gr__rectangleworld_com";
     var div = document.createElement('div');
     div.innerHTML = '<canvas id="' + id + '" width="' + width + '" height="' + height + '">';
@@ -52,11 +58,11 @@ function createGrowingCanvasGraphic(id, width, height, orientation = "horizontal
 	canvasApp(id, width, height, orientation);
 }
 
-function canvasSupport() {
+var canvasSupport = function () {
 	return Modernizr.canvas;
 }
 
-function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.innerHeight, orientation) {
+var canvasApp = function (id, displayWidth = window.innerWidth, displayHeight = window.innerHeight, orientation) {
 	if (!canvasSupport()) {
 		return;
 	}
@@ -420,3 +426,5 @@ function canvasApp(id, displayWidth = window.innerWidth, displayHeight = window.
 		exportImage.src = dataURL;
 	}	
 }
+
+window.addEventListener("load", windowLoadHandler, false);
