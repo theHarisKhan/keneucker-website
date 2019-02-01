@@ -16,9 +16,15 @@ div{
     padding: 0;
 }*/
 body {
+    height: 100%;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     color: #CDE4F5;
+}
+
+#top {
+    position: absolute;
+    top: 0;
 }
 
 #banner {
@@ -44,6 +50,7 @@ h1, h2 {
     font-size: 1.5em;
     display: flex;
     flex-direction: row;
+    margin-left: -35px;
 }
 
 .icons a {
@@ -63,7 +70,7 @@ h1, h2 {
 
 .bubbles img {
     vertical-align: top;
-    max-height: 150px;
+    max-height: 80px;
     max-width: 250px;
 }
 
@@ -172,6 +179,14 @@ img.cs-logo {
     margin-top: 3px;
 }
 
+img.upwork-logo {
+    max-height: 22px;
+    vertical-align: top;
+    margin-top: 6px;
+    width: 25px;
+    height: 20px;
+}
+
 .fix-badge-top-corner .badge img {
     max-width: 25%;
 }
@@ -273,6 +288,10 @@ canvas#displayCanvas {
 	-webkit-animation-timing-function: ease-in-out;		
 
 	visibility: visible !important;	
+}
+
+.slideRight .icons {
+    margin-left:unset;
 }
 
 .slideRight .icons, .slideRight .icons a {
@@ -393,7 +412,7 @@ canvas#displayCanvas {
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;		
 
-	visibility: visible !important;
+    visibility: visible !important;
 }
 
 @keyframes slideLeft {
@@ -552,7 +571,7 @@ canvas#displayCanvas {
         width: 200px;
     }
     .current-role img {
-        max-width: 250px;
+        max-height: 125px;
     }
     #banner h1 {
         font-size: 5rem;    
@@ -637,7 +656,7 @@ canvas#displayCanvas {
         width: 350px;
     }
     .current-role img {
-        max-width: 300px;
+        max-height: 175px;
     }  
     @keyframes slideRightAndScaleDown {
         0% {
@@ -722,6 +741,10 @@ canvas#displayCanvas {
     }
     .fix-badge-top-corner .badge img {
         margin-left: -20%;
+    }
+
+    .bubbles img {
+        max-height: 150px;
     }
 
     @keyframes slideRightAndScaleDown {
