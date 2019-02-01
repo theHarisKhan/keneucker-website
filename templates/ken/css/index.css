@@ -232,7 +232,7 @@ img.badge-icon {
 
 canvas#displayCanvas {
     position: absolute;
-    top: 50%;
+    top: 600px;
     z-index: -1;
 }
 
