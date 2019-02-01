@@ -301,7 +301,7 @@ canvas#displayCanvas {
 	animation-duration: 2s;	
 	-webkit-animation-duration: 2s;
     
-    flex-direction: column-reverse;
+    flex-direction: column;
 /*
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;		*/
