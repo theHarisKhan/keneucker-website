@@ -50,7 +50,7 @@ h1, h2 {
     font-size: 1.5em;
     display: flex;
     flex-direction: row;
-    margin-left: -35px;
+    margin-left: -15px;
 }
 
 .icons a {
@@ -70,8 +70,8 @@ h1, h2 {
 
 .bubbles img {
     vertical-align: top;
-    max-height: 80px;
-    max-width: 250px;
+    max-height: 75px;
+    max-width: 230px;
 }
 
 .blocks span {
@@ -173,6 +173,10 @@ hr.curl:before {
     background: linear-gradient(to bottom right, #021828, #0B5A97) no-repeat; /* Standard syntax */
 }
 
+img.mysql-logo {
+    max-height: 65px;
+}
+
 img.patreon-logo-mini {
     margin-top: 7px;
     margin-right: -2px;
@@ -182,6 +186,15 @@ img.cs-logo {
     max-height: 22px;
     vertical-align: top;
     margin-top: 3px;
+}
+
+img.redis-logo {
+    max-width:125px;
+}
+
+img.git-logo {
+    max-width:105px;
+    margin-top: 20px;
 }
 
 img.upwork-logo {
@@ -205,7 +218,7 @@ img.upwork-logo {
 }
 
 #badge {
-    position: absolute;
+    position: fixed;
     left: 35%;
     top: 7%;
     width: 100%;
@@ -218,7 +231,7 @@ img.badge-icon {
 
 canvas#displayCanvas {
     position: absolute;
-    top: 600px;
+    top: 950px;
     z-index: -1;
     max-width: 100%;
 }
@@ -240,7 +253,6 @@ canvas#displayCanvas {
 }
 
 .fix-badge-top-corner {
-    position: fixed !important;
     top: -5% !important;
 }
 
@@ -248,7 +260,7 @@ canvas#displayCanvas {
     right: 0;
     display: flex;
     flex-direction: column;
-    transform: translate(53%);
+    transform: translate(57%);
     font-size: 1.5em;
     margin-top: -40px;
     margin-left: 0;
@@ -335,7 +347,7 @@ canvas#displayCanvas {
 	100% {
         display: flex;
         flex-direction: row;
-        margin-left: -35px;
+        margin-left: -15px;
         margin-top: 0px;
         transform: translate(0);        
 	}
@@ -355,7 +367,7 @@ canvas#displayCanvas {
 	100% {
         display: flex;
         flex-direction: row;
-        margin-left: -35px;
+        margin-left: -15px;
         margin-top: 0px;
 	}
 }
@@ -364,7 +376,7 @@ canvas#displayCanvas {
 	0% {
         display: flex;
         flex-direction: row;
-        margin-left: -35px;
+        margin-left: -15px;
         transform: translate(0%);
         margin-top: 0px;
     }		
@@ -372,7 +384,7 @@ canvas#displayCanvas {
         right: 0;
         display: flex;
         flex-direction: column;
-        transform: translate(53%);
+        transform: translate(54%);
         margin-top: -40px;
     }
 }
@@ -381,7 +393,7 @@ canvas#displayCanvas {
 	0% {
         display: flex;
         flex-direction: row;
-        margin-left: -35px;
+        margin-left: -15px;
         transform: translate(0%);
         margin-top: 0px;
     }
@@ -389,7 +401,7 @@ canvas#displayCanvas {
         right: 0;
         display: flex;
         flex-direction: column;
-        transform: translate(53%);
+        transform: translate(54%);
         margin-top: -40px;
 	}
 }
@@ -448,6 +460,9 @@ canvas#displayCanvas {
 /* Bigger than 350 */
  /* iPhone 6 @ 375 x 667 */
 @media (min-width: 375px) {
+    canvas#displayCanvas {
+        top: 750px;
+    }
 }
 
 /* Bigger than 412 */
@@ -455,6 +470,10 @@ canvas#displayCanvas {
  /* Nexus 6P @ 412 x 732 */
  /* iPhone 6 Plus @ 414 x 736 */
 @media (min-width: 412px) {
+    canvas#displayCanvas {
+        top: 650px;
+    }
+
     section {
         max-width: unset;        
         padding: 0 15px;
@@ -474,11 +493,22 @@ canvas#displayCanvas {
         left: 35%;
     }
 
-
+    .fix-badge-top-corner .icons {
+        transform: translate(56%);
+    }
 }
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
+    canvas#displayCanvas {
+        top: 600px;
+    }
+
+    .git-logo {
+        max-width:145px;
+        margin-top: 0;
+    }
+
     .mongodb-logo {
         max-width:370px;
     }
@@ -506,16 +536,19 @@ canvas#displayCanvas {
         width: 650px;
         padding: unset;
     }
-
-    /* .fix-badge-top-corner {
-        position: fixed;
-        top: 5%;
-        transform: translateX(10%);
-    } */
+    
+    .bubbles img {
+        max-height: 80px;
+        max-width: 250px;
+    }
 
     .fix-badge-top-corner .badge {
-        transform: scale(0.35) translate(56%);
+        transform: scale(0.35) translate(59%);
     }
+
+    /* .fix-badge-top-corner .icons {
+        transform: translate(55%);
+    } */
 }
 
 /* Bigger than 768 */
@@ -550,6 +583,10 @@ canvas#displayCanvas {
 @media (min-width: 1240px) {
     #badge {
         left: 46%;
+    }
+
+    .fix-badge-top-corner .icons {
+        transform: translate(54%);
     }
 }
 
