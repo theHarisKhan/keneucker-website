@@ -59,7 +59,7 @@ h1, h2 {
 }
 
 .icons img {
-    max-height: 24px;
+    max-height: 18px;
     vertical-align: top;
 }
 
@@ -171,6 +171,11 @@ hr.curl:before {
     background: -o-linear-gradient(bottom right, #021828, #0B5A97) no-repeat; /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right,#021828, #0B5A97) no-repeat; /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #021828, #0B5A97) no-repeat; /* Standard syntax */
+}
+
+img.patreon-logo-mini {
+    margin-top: 7px;
+    margin-right: -2px;
 }
 
 img.cs-logo {
