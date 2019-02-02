@@ -427,4 +427,6 @@ var canvasApp = function (id, displayWidth = window.innerWidth, displayHeight = 
 	}	
 }
 
-window.addEventListener("load", windowLoadHandler, false);
+if (window.innerWidth > 700) {
+	window.addEventListener("load", windowLoadHandler, false);
+}
