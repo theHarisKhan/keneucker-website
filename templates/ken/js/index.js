@@ -23,49 +23,40 @@ function hideMore(target, a) {
     a.childNodes[0].innerHTML = " More";
 }
 
-function getOffset(el) {
-  el = el.getBoundingClientRect();
-  return {
-    left: el.left + window.scrollX,
-    top: el.top + window.scrollY
-  }
-}
-
 function onScrollMoveBadge() {
     var badge = document.querySelector('#badge'),
-        badgeStyle = getComputedStyle(badge),
-        isPositionFixed = badgeStyle.position == "fixed",
+        badgeCornerFixedClass = 'fix-badge-top-corner',
+        isFixedToCorner = badge.classList.contains(badgeCornerFixedClass),
         badgeLine = document.querySelector('#badge-line'),
         badgeLineStyle = getComputedStyle(badgeLine),
-        badgeLineOffset = parseInt(badgeLineStyle.marginBottom, 10) - 10,
-        atPosition = getOffset(badgeLine).top - 250,
-        bodyScrollPosition = document.querySelector('body').scrollTop;
-        htmlScrollPosition = document.querySelector('html').scrollTop;
+        badgeLineOffset = parseInt(badgeLineStyle.marginBottom, 10) - badgeLine.offsetTop,
+        bodyScrollPosition = document.querySelector('body').scrollTop,
+        htmlScrollPosition = document.querySelector('html').scrollTop,
+        hasScrolledPastBadgeLine = htmlScrollPosition > badgeLineOffset;
         
     var scrollInfo = {
         badge,
-        badgeStyle,
-        isPositionFixed,
+        isFixedToCorner,
         badgeLine,
         badgeLineStyle,
         badgeLineOffset,
-        atPosition,
         bodyScrollPosition,
         htmlScrollPosition,
     };
     
     if(htmlScrollPosition == 0){
-        badge.classList.remove("fix-badge-top-corner");   
+        badge.classList.remove(badgeCornerFixedClass);   
     }
-    if (htmlScrollPosition > atPosition) {
+
+    if (hasScrolledPastBadgeLine && !isFixedToCorner) {
         console.log('sliding badge to the right');
         console.log(scrollInfo);
 
         badge.classList.remove("slideLeft");
         badge.classList.add("slideRight");
-        badge.classList.add("fix-badge-top-corner");
+        badge.classList.add(badgeCornerFixedClass);
     }
-    else if (htmlScrollPosition < atPosition && isPositionFixed){
+    else if (isFixedToCorner && !hasScrolledPastBadgeLine){
         console.log('sliding badge to the left');
         console.log(scrollInfo);
 
@@ -80,6 +71,9 @@ function onScrollMoveBadge() {
 
 var windowScrollCount = 0;
 window.onload = function() {
+    if (window.scrollY) {
+        onScrollMoveBadge();
+    }
     window.addEventListener('scroll', onScrollMoveBadge);
 };
 
