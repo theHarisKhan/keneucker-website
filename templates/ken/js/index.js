@@ -33,37 +33,48 @@ function getOffset(el) {
 
 function onScrollMoveBadge() {
     var badge = document.querySelector('#badge'),
-        isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
+        badgeStyle = getComputedStyle(badge),
+        isPositionFixed = badgeStyle.position == "fixed",
         badgeLine = document.querySelector('#badge-line'),
+        badgeLineStyle = getComputedStyle(badgeLine),
+        badgeLineOffset = parseInt(badgeLineStyle.marginBottom, 10) - 10,
         atPosition = getOffset(badgeLine).top - 250,
-        scrollPosition = document.querySelector('body').scrollTop;
-        console.log(windowScrollCount++);
-
-        scrollPosition = document.querySelector('html').scrollTop;                
-
-    if(scrollPosition == 0){
+        bodyScrollPosition = document.querySelector('body').scrollTop;
+        htmlScrollPosition = document.querySelector('html').scrollTop;
+        
+    var scrollInfo = {
+        badge,
+        badgeStyle,
+        isPositionFixed,
+        badgeLine,
+        badgeLineStyle,
+        badgeLineOffset,
+        atPosition,
+        bodyScrollPosition,
+        htmlScrollPosition,
+    };
+    
+    if(htmlScrollPosition == 0){
         badge.classList.remove("fix-badge-top-corner");   
     }
-    if (scrollPosition > atPosition) {
-        badge.classList.add("fix-badge-top-corner");
-        badge.classList.add("slideRight");
+    if (htmlScrollPosition > atPosition) {
+        console.log('sliding badge to the right');
+        console.log(scrollInfo);
+
         badge.classList.remove("slideLeft");
+        badge.classList.add("slideRight");
+        badge.classList.add("fix-badge-top-corner");
     }
-    else if (scrollPosition < atPosition && isPositionFixed){
-        badge.classList.remove("fix-badge-top-corner");
+    else if (htmlScrollPosition < atPosition && isPositionFixed){
+        console.log('sliding badge to the left');
+        console.log(scrollInfo);
+
         badge.classList.remove("slideRight");
         badge.classList.add("slideLeft");
 
         hideMore("#more-why","#why a.expander");
         hideMore("#more-who","#who a.expander");
         hideMore("#more-what","#what a.expander");
-
-        var igShowing = document.querySelector(".ig-view-showing");
-        if(igShowing) {
-            igShowing.classList.add("ig-view");
-            igShowing.classList.remove("ig-view-showing");
-            document.querySelector(".ig-overlay").classList.remove("hidden");
-        }
     }
 }
 
@@ -72,7 +83,8 @@ window.onload = function() {
     window.addEventListener('scroll', onScrollMoveBadge);
 };
 
-document.querySelector('#badge').addEventListener('click', function() {
+document.querySelector('#badge').addEventListener('click', function(e) {
+    e.preventDefault();
     var badge = document.querySelector('#badge'),
         topOfPageElement = document.getElementById("top"),
         scrollPosition = document.querySelector('html').scrollTop;                

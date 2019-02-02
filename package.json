@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "A website for keneucker.com",
   "author": "Ken Eucker <keneucker@gmail.com>",
-  "contributors": [
-  ],
+  "contributors": [],
   "bin": {},
   "scripts": {},
   "main": "index.js",
@@ -18,6 +17,8 @@
   "keywords": [],
   "dependencies": {
     "express": "^4.14.0",
+    "express-favicon": "^2.0.1",
+    "fs": "^0.0.1-security",
     "path": "^0.12.7"
   },
   "devDependencies": {

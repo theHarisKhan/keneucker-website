@@ -187,25 +187,6 @@ img.upwork-logo {
     height: 20px;
 }
 
-.fix-badge-top-corner .badge img {
-    max-width: 25%;
-}
-
-.fix-badge-top-corner {
-    float: right;
-    max-width: 10%;
-    -webkit-animation: slide-right 1.5s 1;
-    animation: slide-right 1.5s 1;
-}
-.fix-badge-top-corner .icons {
-    max-width: 10%;
-}
-
-.fix-badge-top-corner .icons a {
-    margin-left: 0em !important;
-    
-}
-
 .icons a:nth-child(1) {
     margin-left: -0.25em;
 }
@@ -219,10 +200,10 @@ img.upwork-logo {
 }
 
 #badge {
-    position: fixed;
-    padding-top: 25px;
-    margin-top: -250px;
-    margin-left: 65px;
+    position: absolute;
+    left: 35%;
+    top: 7%;
+    width: 100%;
 }
 
 img.badge-icon {
@@ -240,29 +221,6 @@ canvas#displayCanvas {
     border-radius: 20px;
 }
 
-.points {
-}
-
-.ig-view {
-    overflow: hidden;
-    height: 125px;
-    max-width: 100px;
-}
-
-.ig-view-showing {
-    border-radius: unset;
-}
-
-.ig-overlay {
-    height: 100px;
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    cursor: pointer;
-    font-size: 6em;
-    text-align: center;
-}
-
 .hidden {
     display: none;
 }
@@ -275,14 +233,35 @@ canvas#displayCanvas {
     cursor: pointer;
 }
 
-/* Animation classes are from http://www.justinaguilar.com/animations/ */
+.fix-badge-top-corner {
+    position: fixed !important;
+    top: -5% !important;
+}
 
-.slideRight .badge{
+.fix-badge-top-corner .icons {
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transform: translate(53%);
+    font-size: 1.5em;
+    margin-top: -40px;
+    margin-left: 0;
+}
+
+.fix-badge-top-corner .icons a, .fix-badge-top-corner .icons a:nth-child(1) {
+    margin-left: 0em !important;
+}
+
+.fix-badge-top-corner .badge {
+    transform: scale(0.35) translate(53%);
+}
+
+.slideRight .badge {
 	animation-name: slideRightAndScaleDown;
 	-webkit-animation-name: slideRightAndScaleDown;	
 
-	animation-duration: 1.5s;	
-	-webkit-animation-duration: 1.5s;
+	animation-duration: 0.4s;	
+	-webkit-animation-duration: 0.4s;
 
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;		
@@ -291,110 +270,130 @@ canvas#displayCanvas {
 }
 
 .slideRight .icons {
-    margin-left:unset;
-}
-
-.slideRight .icons, .slideRight .icons a {
 	animation-name: slideRightAndRotateCounterClockwise;
 	-webkit-animation-name: slideRightAndRotateCounterClockwise;	
 
-	animation-duration: 2s;	
-	-webkit-animation-duration: 2s;
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
     
-    flex-direction: column;
-/*
 	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		*/
+	-webkit-animation-timing-function: ease-in-out;		
 
 	visibility: visible !important;	
 }
 
-@keyframes slideRight {
+@keyframes slideLeftAndScaleUp {
 	0% {
-		transform: translateX(-5000%);
+		transform: scale(0.5) translateX(50%);
 	}
-	50%{
-		transform: translateX(8%);
-	}
-	65%{
-		transform: translateX(-4%);
-	}
-	80%{
-		transform: translateX(4%);
-	}
-	95%{
-		transform: translateX(-2%);
-	}			
 	100% {
-		transform: translateX(0%);
-	}	
+        transform: scale(1);
+	}
 }
 
-@-webkit-keyframes slideRight {
+@-webkit-keyframes slideLeftAndScaleUp {
 	0% {
-		-webkit-transform: translateX(-80%);
+		transform: scale(0.5) translateX(50%);
 	}
-	50%{
-		-webkit-transform: translateX(8%);
-	}
-	65%{
-		-webkit-transform: translateX(-4%);
-	}
-	80%{
-		-webkit-transform: translateX(4%);
-	}
-	95%{
-		-webkit-transform: translateX(-2%);
-	}			
 	100% {
-		-webkit-transform: translateX(0%);
+		transform: scale(1);
 	}
 }
 
 @keyframes slideRightAndScaleDown {
 	0% {
-		transform: scale(5.56) translate(calc(-60%), calc(41%));
+		transform: scale(1);
 	}
 	100% {
-		transform: scale(1) translateX(0%);
+        transform: scale(0.35) translate(53%);
 	}	
 }
 
 @-webkit-keyframes slideRightAndScaleDown {
 	0% {
-		transform: scale(5.56) translate(-66%, 41%);
+		transform: scale(1);
 	}			
 	100% {
-		transform: scale(1) translateX(0%);
+		transform: scale(0.35) translate(53%);
 	}	
 }
 
+@keyframes slideLeftAndRotateClockwise {
+	0% {
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translate(53%);
+        margin-top: -40px;
+    }
+	100% {
+        display: flex;
+        flex-direction: row;
+        margin-left: -35px;
+        margin-top: 0px;
+        transform: translate(0);        
+	}
+}
+
+@-webkit-keyframes slideLeftAndRotateClockwise {
+	0% {
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translate(53%, 500%);
+        margin-top: -40px;
+    }
+    99% {
+        flex-direction: row;        
+    }
+	100% {
+        display: flex;
+        flex-direction: row;
+        margin-left: -35px;
+        margin-top: 0px;
+	}
+}
 
 @keyframes slideRightAndRotateCounterClockwise {
 	0% {
-		transform: rotate(90deg) translate(calc(800%), calc(75%));
-	}			
+        display: flex;
+        flex-direction: row;
+        margin-left: -35px;
+        transform: translate(0%);
+        margin-top: 0px;
+    }		
 	100% {
-		transform: rotate(0) translateX(0%);
-	}	
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translate(53%);
+        margin-top: -40px;
+    }
 }
-
 
 @-webkit-keyframes slideRightAndRotateCounterClockwise {
 	0% {
-		transform: rotate(90) translate(-66%, 41%);
-	}			
+        display: flex;
+        flex-direction: row;
+        margin-left: -35px;
+        transform: translate(0%);
+        margin-top: 0px;
+    }
 	100% {
-		transform: rotate(0) translateX(0%);
-	}	
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translate(53%);
+        margin-top: -40px;
+	}
 }
 
 .slideLeft .badge {
 	animation-name: slideLeftAndScaleUp;
 	-webkit-animation-name: slideLeftAndScaleUp;	
 
-	animation-duration: 0.5s;	
-	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.4s;	
+	-webkit-animation-duration: 0.4s;
 
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;		
@@ -402,12 +401,12 @@ canvas#displayCanvas {
 	visibility: visible !important;
 }
 
-.slideLeft .icons, .slideLeft .icons a {
+.slideLeft .icons {
 	animation-name: slideLeftAndRotateClockwise;
 	-webkit-animation-name: slideLeftAndRotateClockwise;	
 
-	animation-duration: 0.8s;	
-	-webkit-animation-duration: 0.8s;
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
 
 	animation-timing-function: ease-in-out;	
 	-webkit-animation-timing-function: ease-in-out;		
@@ -415,100 +414,11 @@ canvas#displayCanvas {
     visibility: visible !important;
 }
 
-@keyframes slideLeft {
-	0% {
-		transform: translateX(80%);
-	}
-	50%{
-		transform: translateX(-8%);
-	}
-	65%{
-		transform: translateX(4%);
-	}
-	80%{
-		transform: translateX(-4%);
-	}
-	95%{
-		transform: translateX(2%);
-	}			
-	100% {
-		transform: translateX(0%);
-	}
-}
-
-@-webkit-keyframes slideLeft {
-	0% {
-		-webkit-transform: translateX(50%);
-	}
-	50%{
-		-webkit-transform: translateX(-8%);
-	}
-	65%{
-		-webkit-transform: translateX(4%);
-	}
-	80%{
-		-webkit-transform: translateX(-4%);
-	}
-	95%{
-		-webkit-transform: translateX(2%);
-	}			
-	100% {
-		-webkit-transform: translateX(0%);
-	}
-}
-
-@keyframes slideLeftAndRotateClockwise {
-	0% {
-		transform: rotate(-90deg) translate(48%, 450%);
-	}
-	100% {
-		transform: rotate(0deg) translateX(0%);
-	}
-}
-
-@-webkit-keyframes slideLeftAndRotateClockwise {
-	0% {
-		transform: rotate(-90deg) translate(48%, 450%);
-	}
-	100% {
-		transform: rotate(0deg) translateX(0%);
-	}
-}
-
-@keyframes slideLeftAndScaleUp {
-	0% {
-		transform: scale(0.18) translate(600%, -220%);
-	}
-	100% {
-		transform: scale(1) translateX(0%);
-	}
-}
-
-@-webkit-keyframes slideLeftAndScaleUp {
-	0% {
-		transform: scale(0.18) translate(600%, -220%);
-	}
-	100% {
-		transform: scale(1) translateX(0%);
-	}
-}
-
 /* Bigger than 320 */
  /* iPhone 5 @ 320 x 568 */
 @media (min-width: 320px) {
     .mongodb-logo {
         max-width:290px;
-    }
-    .fix-badge-top-corner .badge img {
-        max-width: 75%;
-        margin-left: 0;   
-    }
-    #badge.fix-badge-top-corner {
-        right: 0;   
-    }
-    #badge {
-        margin-top: -75%;
-        margin-left: 90px;  
     }
     .ig-view {
         max-width: 150px;
@@ -527,25 +437,11 @@ canvas#displayCanvas {
     .mongodb-logo {
         max-width:330px;
     }
-    .fix-badge-top-corner .badge img {
-        max-width: 75%;
-        margin-left: 0;   
-    }
-    #badge.fix-badge-top-corner {
-        right: 0;   
-    }
-    #badge {
-        margin-top: -250px;
-        margin-left: 110px;  
-    }
 }
 
 /* Bigger than 350 */
  /* iPhone 6 @ 375 x 667 */
 @media (min-width: 375px) {
-    #badge {
-        margin-left: 115px;  
-    }
 }
 
 /* Bigger than 412 */
@@ -556,19 +452,6 @@ canvas#displayCanvas {
     section {
         max-width: unset;        
         padding: 0 15px;
-    }
-    .fix-badge-top-corner .badge img {
-        max-width: 70%;
-        margin-left: 5%;
-    }
-    #badge {
-        margin-left: 140px;
-    }
-    .ig-view {
-        max-width: 200px;
-    }
-    .ig-overlay {
-        width: 200px;
     }
     .current-role img {
         max-height: 125px;
@@ -581,6 +464,11 @@ canvas#displayCanvas {
         font-size: 4rem;
     }
 
+    #badge {
+        left: 35%;
+    }
+
+
 }
 
 /* Bigger than 550 */
@@ -591,20 +479,6 @@ canvas#displayCanvas {
     section {
         max-width: 600px;
         padding: 0 5px;
-        /*margin: auto;*/
-    }
-    .fix-badge-top-corner .badge img {
-        max-width: 55%;
-    }
-    #badge.fix-badge-top-corner {
-        right: 0;
-    }
-    
-    #badge {
-        top: 0;
-        margin-left: 40%;
-        margin-top: 25px;
-        padding-top: 25px;
     }
 
     h2 {
@@ -614,6 +488,10 @@ canvas#displayCanvas {
         font-size: 7rem;    
     }
 
+    #badge {
+        left: 40%;
+    }
+
 }
 
 /* Bigger than 750 */
@@ -621,19 +499,16 @@ canvas#displayCanvas {
     section {
         width: 650px;
         padding: unset;
-        /*margin-left: -250px;
-        left: 50%;
-        position: absolute;*/
     }
-    .fix-badge-top-corner .badge img {
-        margin-left: -5%;
-    }
-    .ig-view {
-        max-width: 250px;
-        max-height: 120px;
-    }
-    .ig-overlay {
-        width: 250px;
+
+    /* .fix-badge-top-corner {
+        position: fixed;
+        top: 5%;
+        transform: translateX(10%);
+    } */
+
+    .fix-badge-top-corner .badge {
+        transform: scale(0.35) translate(56%);
     }
 }
 
@@ -643,303 +518,46 @@ canvas#displayCanvas {
     section {
         width: 750px;
     }
-    #badge {
-        margin-left: 41%;
-    }
-    .fix-badge-top-corner .badge img {
-        margin-left: -20%;
-    }
-    .ig-view {
-        max-width: 350px;
-    }
-    .ig-overlay {
-        width: 350px;
-    }
     .current-role img {
         max-height: 175px;
-    }  
-    @keyframes slideRightAndScaleDown {
-        0% {
-            transform: scale(3.55) translate(calc(-82%), calc(36%));
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }	
     }
-
-    @-webkit-keyframes slideRightAndScaleDown {
-        0% {
-            transform: scale(3.55) translate(calc(-82%), calc(36%));
-        }			
-        100% {
-            transform: scale(1) translateX(0%);
-        }	
+    
+    #badge {
+        left: 44%;
     }
-
-
-    @keyframes slideRightAndRotateCounterClockwise {
-        0% {
-            transform: rotate(90deg) translate(calc(220%), calc(165%));
-        }			
-        100% {
-            transform: rotate(0) translateX(0%);
-        }	
-    }
-
-
-    @-webkit-keyframes slideRightAndRotateCounterClockwise {
-        0% {
-            transform: rotate(90deg) translate(calc(220%), calc(165%));
-        }			
-        100% {
-            transform: rotate(0) translateX(0%);
-        }	
-    }
-
-    @keyframes slideLeftAndRotateClockwise {
-        0% {
-            transform: rotate(-90deg) translate(33%, 900%);
-        }
-        100% {
-            transform: rotate(0deg) translateX(0%);
-        }
-    }
-
-    @-webkit-keyframes slideLeftAndRotateClockwise {
-        0% {
-            transform: rotate(-90deg) translate(33%, 900%);
-        }
-        100% {
-            transform: rotate(0deg) translateX(0%);
-        }
-    }
-
-    @keyframes slideLeftAndScaleUp {
-        0% {
-            transform: scale(0.28) translate(780%, -130%);
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }
-    }
-
-    @-webkit-keyframes slideLeftAndScaleUp {
-        0% {
-            transform: scale(0.28) translate(780%, -130%);
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }
+    .fix-badge-top-corner {
+        transform: translateX(-3%);
     }
 }
 
 /* Bigger than 1024 */
  /* iPad Pro @ 1024 X 1366 */
 @media (min-width: 1024px) {
-    #badge {
-        margin-left: 43%;
-    }
-    .fix-badge-top-corner .badge img {
-        margin-left: -20%;
-    }
 
     .bubbles img {
         max-height: 150px;
     }
 
-    @keyframes slideRightAndScaleDown {
-        0% {
-            transform: scale(2.67) translate(calc(-125%), calc(31%));
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }	
-    }
-
-    @-webkit-keyframes slideRightAndScaleDown {
-        0% {
-            transform: scale(2.67) translate(calc(-125%), calc(31%));
-        }			
-        100% {
-            transform: scale(1) translateX(0%);
-        }	
-    }
-
-
-    @keyframes slideRightAndRotateCounterClockwise {
-        0% {
-            transform: rotate(90deg) translate(calc(100%), calc(220%));
-        }			
-        100% {
-            transform: rotate(0) translateX(0%);
-        }	
-    }
-
-
-    @-webkit-keyframes slideRightAndRotateCounterClockwise {
-        0% {
-            transform: rotate(90deg) translate(calc(100%), calc(220%));
-        }			
-        100% {
-            transform: rotate(0) translateX(0%);
-        }	
-    }
-
-    @keyframes slideLeftAndRotateClockwise {
-        0% {
-            transform: rotate(-90deg) translate(48%, 1250%);
-        }
-        100% {
-            transform: rotate(0deg) translateX(0%);
-        }
-    }
-
-    @-webkit-keyframes slideLeftAndRotateClockwise {
-        0% {
-            transform: rotate(-90deg) translate(48%, 45%);
-        }
-        100% {
-            transform: rotate(0deg) translateX(0%);
-        }
-    }
-
-    @keyframes slideLeftAndScaleUp {
-        0% {
-            transform: scale(0.18) translate(1600%, -150%);
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }
-    }
-
-    @-webkit-keyframes slideLeftAndScaleUp {
-        0% {
-            transform: scale(0.18) translate(1600%, -150%);
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }
-    }
 }
 
 /* Bigger than 1240 */
 @media (min-width: 1240px) {
     #badge {
-        margin-left: 45%;
-    }
-    .fix-badge-top-corner .badge img {
-        margin-left: -20%;
-    }
-    .ig-overlay {
-        width: 450px;
-    }
-    .ig-view {
-        max-width: 450px;
-    }
-    @keyframes slideRightAndScaleDown {
-        0% {
-            transform: scale(1.99) translate(calc(-180%), calc(25%));
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }	
-    }
-
-    @-webkit-keyframes slideRightAndScaleDown {
-        0% {
-            transform: scale(1.99) translate(calc(-180%), calc(25%));
-        }			
-        100% {
-            transform: scale(1) translateX(0%);
-        }	
-    }
-
-
-    @keyframes slideRightAndRotateCounterClockwise {
-        0% {
-            transform: rotate(90deg) translate(calc(10%), calc(294%));
-        }			
-        100% {
-            transform: rotate(0) translateX(0%);
-        }	
-    }
-
-
-    @-webkit-keyframes slideRightAndRotateCounterClockwise {
-        0% {
-            transform: rotate(90deg) translate(calc(10%), calc(294%));
-        }			
-        100% {
-            transform: rotate(0) translateX(0%);
-        }	
-    }
-
-    @keyframes slideLeftAndRotateClockwise {
-        0% {
-            transform: rotate(-90deg) translate(10%, 1550%);
-        }
-        100% {
-            transform: rotate(0deg) translateX(0%);
-        }
-    }
-
-    @-webkit-keyframes slideLeftAndRotateClockwise {
-        0% {
-            transform: rotate(-90deg) translate(10%, 1550%);
-        }
-        100% {
-            transform: rotate(0deg) translateX(0%);
-        }
-    }
-
-    @keyframes slideLeftAndScaleUp {
-        0% {
-            transform: scale(0.50) translate(750%, -50%);
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }
-    }
-
-    @-webkit-keyframes slideLeftAndScaleUp {
-        0% {
-            transform: scale(0.50) translate(750%, -50%);
-        }
-        100% {
-            transform: scale(1) translateX(0%);
-        }
+        left: 46%;
     }
 }
 
 /* Bigger than 1900 */
 @media (min-width: 1900px) {
-    #badge {
-        margin-left: 46%;
-    }
     section {
         max-width: 900px;
-    }
-    .ig-overlay {
-        width: 550px;
-    }
-    .ig-view {
-        max-width: 550px;
     }
 }
 
 /* Bigger than 1900 */
 /* 4K */
 @media (min-width: 3800px) {
-    #badge {
-        margin-left: 48%;
-    }
     section {
         width: 1200px;
-    }
-    .ig-overlay {
-        width: 375px;
-    }
-    .ig-view {
-        max-width: 750px;
     }
 }
