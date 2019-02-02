@@ -42,7 +42,7 @@ var windowLoadHandler = function () {
 
 	// if scrolled down at least once, run the animation
     window.addEventListener('scroll', function () {
-		if (!graphicsLoaded) {
+		if (!graphicsLoaded && window.scrollY > 400) {
 			graphicsLoaded = true;
 			createGrowingCanvasGraphic("displayCanvas", window.innerWidth, window.innerHeight);
 		}
