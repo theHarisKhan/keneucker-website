@@ -112,6 +112,13 @@ document.querySelector('#badge').addEventListener('click', function(e) {
     }
 });
 
+// Hack to get the badge links to work again
+document.querySelectorAll('#badge a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+     });
+});
+
 // function reverseOrderOfChildren(selector) {
 // 	var children = document.querySelectorAll(selector);
 //   	for(var i = children.length - 1, j = 1; i >= 0; i--,j++) {
