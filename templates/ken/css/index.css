@@ -172,6 +172,10 @@ hr.curl:before {
     background: -moz-linear-gradient(bottom right,#021828, #0B5A97) no-repeat; /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #021828, #0B5A97) no-repeat; /* Standard syntax */
 }
+img.html-css-logo {
+    max-height: 100px;
+    margin-top: -15px;
+}
 
 img.mysql-logo {
     max-height: 65px;
@@ -193,8 +197,8 @@ img.redis-logo {
 }
 
 img.git-logo {
-    max-width:105px;
-    margin-top: 20px;
+    max-width:125px;
+    margin-top: 10px;
 }
 
 img.upwork-logo {
@@ -504,11 +508,6 @@ canvas#displayCanvas {
         top: 600px;
     }
 
-    .git-logo {
-        max-width:145px;
-        margin-top: 0;
-    }
-
     .mongodb-logo {
         max-width:370px;
     }
@@ -535,11 +534,6 @@ canvas#displayCanvas {
     section {
         width: 650px;
         padding: unset;
-    }
-    
-    .bubbles img {
-        max-height: 80px;
-        max-width: 250px;
     }
 
     .fix-badge-top-corner .badge {
@@ -575,6 +569,11 @@ canvas#displayCanvas {
 
     .bubbles img {
         max-height: 150px;
+    }
+    
+    img.git-logo {
+        max-width: 200px;
+        margin-top: 0;
     }
 
 }
