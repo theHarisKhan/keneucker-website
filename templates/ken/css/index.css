@@ -46,11 +46,15 @@ h1, h2 {
     -webkit-text-fill-color: rgb(205, 228, 245);
 }
 
+.fa-linkedin {
+    font-size: 22px;
+}
+
 .icons {
     font-size: 1.5em;
     display: flex;
     flex-direction: row;
-	margin-left: -15px;
+	margin-left: -25px;
 	pointer-events: all;	
 }
 
@@ -187,14 +191,25 @@ img.mysql-logo {
 }
 
 img.patreon-logo-mini {
-    margin-top: 7px;
+    margin-top: 6px;
     margin-right: -2px;
 }
 
 img.cs-logo {
+    max-height: 20px;
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+.devto-logo {
     max-height: 22px;
     vertical-align: top;
-    margin-top: 3px;
+    margin-top: 1px;
+    text-decoration: none;
+    font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: -1px;
 }
 
 img.redis-logo {
@@ -209,7 +224,7 @@ img.git-logo {
 img.upwork-logo {
     max-height: 22px;
     vertical-align: top;
-    margin-top: 6px;
+    margin-top: 5px;
     width: 25px;
     height: 20px;
 }
@@ -278,6 +293,11 @@ canvas#displayCanvas {
 
 .fix-badge-top-corner .icons a, .fix-badge-top-corner .icons a:nth-child(1) {
     margin-left: 0em !important;
+}
+
+.fix-badge-top-corner .devto-logo {
+    font-size: 15px;
+    letter-spacing: -1px;
 }
 
 .fix-badge-top-corner .badge {
