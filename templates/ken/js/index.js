@@ -23,70 +23,64 @@ function hideMore(target, a) {
     a.childNodes[0].innerHTML = " More";
 }
 
-function getOffset(el) {
-  el = el.getBoundingClientRect();
-  return {
-    left: el.left + window.scrollX,
-    top: el.top + window.scrollY
-  }
-}
-
 function onScrollMoveBadge() {
     var badge = document.querySelector('#badge'),
-        isPositionFixed = (badge.classList.contains('fix-badge-top-corner')),
+        badgeCornerFixedClass = 'fix-badge-top-corner',
+        isFixedToCorner = badge.classList.contains(badgeCornerFixedClass),
         badgeLine = document.querySelector('#badge-line'),
-        atPosition = getOffset(badgeLine).top - 250,
-        scrollPosition = document.querySelector('body').scrollTop;
-        console.log(windowScrollCount++);
-
-        scrollPosition = document.querySelector('html').scrollTop;                
-
-    if(scrollPosition == 0){
-        badge.classList.remove("fix-badge-top-corner");   
+        badgeLineStyle = getComputedStyle(badgeLine),
+        badgeLineOffset = parseInt(badgeLineStyle.marginBottom, 10) - badgeLine.offsetTop,
+        bodyScrollPosition = document.querySelector('body').scrollTop,
+        htmlScrollPosition = document.querySelector('html').scrollTop,
+        hasScrolledPastBadgeLine = htmlScrollPosition > badgeLineOffset;
+        
+    var scrollInfo = {
+        badge,
+        isFixedToCorner,
+        badgeLine,
+        badgeLineStyle,
+        badgeLineOffset,
+        bodyScrollPosition,
+        htmlScrollPosition,
+    };
+    
+    if(htmlScrollPosition == 0){
+        badge.classList.remove(badgeCornerFixedClass);   
     }
-    if (scrollPosition > atPosition) {
-        badge.classList.add("fix-badge-top-corner");
-        badge.classList.add("slideRight");
+
+    if (hasScrolledPastBadgeLine && !isFixedToCorner) {
+        console.log('sliding badge to the right');
+        console.log(scrollInfo);
+
         badge.classList.remove("slideLeft");
+        badge.classList.add("slideRight");
+        badge.classList.add(badgeCornerFixedClass);
     }
-    else if (scrollPosition < atPosition && isPositionFixed){
-        badge.classList.remove("fix-badge-top-corner");
+    else if (isFixedToCorner && !hasScrolledPastBadgeLine){
+        console.log('sliding badge to the left');
+        console.log(scrollInfo);
+
         badge.classList.remove("slideRight");
         badge.classList.add("slideLeft");
 
         hideMore("#more-why","#why a.expander");
         hideMore("#more-who","#who a.expander");
         hideMore("#more-what","#what a.expander");
-
-        var igShowing = document.querySelector(".ig-view-showing");
-        if(igShowing) {
-            igShowing.classList.add("ig-view");
-            igShowing.classList.remove("ig-view-showing");
-            document.querySelector(".ig-overlay").classList.remove("hidden");
-        }
     }
 }
 
 var windowScrollCount = 0;
 window.onload = function() {
-    window.onscroll = onScrollMoveBadge;
+    if (window.scrollY) {
+        onScrollMoveBadge();
+    }
+    window.addEventListener('scroll', onScrollMoveBadge);
 };
 
-function scrollTo(element, to, duration) {
-  if (duration <= 0) return;
-  var difference = to - element.scrollTop;
-  var perTick = difference / duration * 10;
-
-  setTimeout(function() {
-    element.scrollTop = element.scrollTop + perTick;
-    if (element.scrollTop == to) return;
-    scrollTo(element, to, duration - 10);
-  }, 10);
-}
-
-document.querySelector('#badge').addEventListener('click', function() {
-    var body = document.body,
-        badge = document.querySelector('#badge'),
+document.querySelector('#badge').addEventListener('click', function(e) {
+    e.preventDefault();
+    var badge = document.querySelector('#badge'),
+        topOfPageElement = document.getElementById("top"),
         scrollPosition = document.querySelector('html').scrollTop;                
 
         if(scrollPosition == 0) {
@@ -99,17 +93,25 @@ document.querySelector('#badge').addEventListener('click', function() {
         body = document.querySelector('html');                
     }
 
-    scrollTo(body, 0, 600);
-    badge.classList.add("fix-badge-top-corner");
-    badge.classList.remove("slideLeft");
-    badge.classList.add("slideRight");
+    if (topOfPageElement) {
+        topOfPageElement.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    } else {
+        console.log('what even is the top of the page?')
+    }
+
+    if (badge) {
+        badge.classList.add("fix-badge-top-corner");
+        badge.classList.remove("slideLeft");
+        badge.classList.add("slideRight");
+    }
 });
 
-document.querySelector('.ig-overlay').onclick = function() {
-    document.querySelector('.ig-view').classList.add('ig-view-showing');
-    document.querySelector('.ig-view').classList.remove('ig-view');
-    document.querySelector('.ig-overlay').classList.add("hidden");
-};
+// Hack to get the badge links to work again
+document.querySelectorAll('#badge a').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+     });
+});
 
 // function reverseOrderOfChildren(selector) {
 // 	var children = document.querySelectorAll(selector);
