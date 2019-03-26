@@ -225,7 +225,8 @@ img.upwork-logo {
     position: fixed;
     left: 35%;
     top: 7%;
-    width: 100%;
+	width: 100%;
+	pointer-events: none;
 }
 
 img.badge-icon {
@@ -267,7 +268,8 @@ canvas#displayCanvas {
     transform: translate(57%);
     font-size: 1.5em;
     margin-top: -40px;
-    margin-left: 0;
+	margin-left: 0;
+	pointer-events: all;
 }
 
 .fix-badge-top-corner .icons a, .fix-badge-top-corner .icons a:nth-child(1) {
@@ -276,6 +278,7 @@ canvas#displayCanvas {
 
 .fix-badge-top-corner .badge {
     transform: scale(0.35) translate(53%);
+	pointer-events: all;
 }
 
 .slideRight .badge {
