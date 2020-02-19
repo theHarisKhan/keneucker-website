@@ -13,7 +13,7 @@ $base-hue: 180; // change for diff colors (180 is nice)
   height: 0; 
   transform-style: preserve-3d;
   perspective: 1000px;
-  animation: rotate $time infinite linear; // rotate orb
+  animation: rotate $time infinite ease-in-out; // rotate orb
   z-index: 1;
   margin-top: 4em;
 }
@@ -38,7 +38,7 @@ $base-hue: 180; // change for diff colors (180 is nice)
   $hue: ((40/$total * $i) + $base-hue); // set hue
   
   #animation-wrap .c:nth-child(#{$i}){ // grab the nth particle
-    animation: orbit#{$i} $time infinite;
+    animation: orbit#{$i} $time infinite ease-in-out;
     animation-delay: ($i * .01s); 
     background-color: hsla($hue, 100%, 50%, 1);
   }
