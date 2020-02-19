@@ -5,7 +5,9 @@
   "author": "Ken Eucker <keneucker@gmail.com>",
   "contributors": [],
   "bin": {},
-  "scripts": {},
+  "scripts": {
+    "build": "node-sass templates/ken/css/*.scss templates/ken/css/compiled.css"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -22,7 +24,8 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "http-server": "^0.9.0"
+    "http-server": "^0.9.0",
+    "node-sass": "^4.13.1"
   },
   "license": "Unlicense"
 }
