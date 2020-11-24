@@ -1,5 +1,1 @@
-runtime: nodejs
-env: flex
-
-skip_files:
- - ^node_modules$
+runtime: nodejs12
