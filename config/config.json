@@ -1,8 +1,8 @@
 {
     "host": "keneucker.com",
     "subdomains": {
-        "aliases": ["www"],
         "index": {
+            "aliases": ["www"],
             "template": "ken"
         }
     },
