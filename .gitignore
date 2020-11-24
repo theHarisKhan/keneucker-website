@@ -42,3 +42,5 @@ build
 # private configuration files
 config/auth.json
 config/users.json
+
+.DS_Store
