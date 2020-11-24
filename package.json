@@ -8,7 +8,14 @@
   "scripts": {
     "start": "node app.js",
     "dev": "node app.js --debug=true",
-    "setglcoudid": "gcloud config set project keneucker-156821"
+    "setglcoudid": "gcloud config set project keneucker-156821",
+    "server-logs": "sudo pm2 logs Ken",
+    "server-update": "git pull && npm update",
+    "server-start": "sudo pm2 start Ken",
+    "server-restart": "sudo pm2 restart Ken",
+    "server-stop": "sudo pm2 stop Ken",
+    "server-rerun": "sudo pm2 delete Ken && sudo pm2 start app.js --name Ken",
+    "server-deploy": "npm run server-update && npm run server-restart && npm run server-logs"
   },
   "main": "index.js",
   "repository": {
