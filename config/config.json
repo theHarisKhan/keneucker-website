@@ -1,0 +1,9 @@
+{
+    "subdomains": {
+        "index": {
+            "template": "ken"
+        }
+    },
+
+    "favicon": "img/KenEuckerLLCLogo.jpg"
+}
