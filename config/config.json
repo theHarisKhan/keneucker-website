@@ -5,5 +5,9 @@
         }
     },
 
+    "rendering": {
+        "overrideViewEngine": ["liquid", "ejs"]
+    },
+
     "favicon": "img/KenEuckerLLCLogo.jpg"
 }

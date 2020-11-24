@@ -19,7 +19,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "sexpress": "KenEucker/sexpress.git#production"
+    "sexpress": "github:KenEucker/sexpress#production"
   },
   "devDependencies": {},
   "license": "Unlicense"
