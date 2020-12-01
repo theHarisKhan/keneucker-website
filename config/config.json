@@ -1,5 +1,4 @@
 {
-    "host": "keneucker.com",
     "subdomains": {
         "index": {
             "aliases": ["www"],

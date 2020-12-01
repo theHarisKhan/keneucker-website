@@ -33,7 +33,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
-    "sexpress": "^0.6.36",
+    "sexpress": "^0.6.37",
     "supertest": "^6.0.1"
   },
   "devDependencies": {},
