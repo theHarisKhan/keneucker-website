@@ -1,3 +1,5 @@
 const sexpress = require('sexpress')
 
-sexpress().run()
+const app = sexpress()
+
+app.run()
