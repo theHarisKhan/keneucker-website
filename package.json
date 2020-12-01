@@ -12,7 +12,7 @@
     "setglcoudid": "gcloud config set project keneucker-156821",
     "server-logs": "sudo pm2 logs ken",
     "server-update": "git pull",
-    "server-start": "sudo pm2 start ken",
+    "server-start": "sudo pm2 start app.js --name ken",
     "server-restart": "sudo pm2 restart ken",
     "server-stop": "sudo pm2 stop ken",
     "server-rerun": "sudo pm2 delete ken && sudo pm2 start app.js --name ken",
