@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {{ content.gtm }}
-
-        <!-- META -->
-        <title>{{ page.meta.metaTitle }}</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
-        <meta property="og:type" content="{{ page.meta.metaType }}" />
-        <meta property="og:url" content="{{ page.meta.metaUrl }}" />
-        <meta property="og:image" content="{{ page.meta.metaImage }}" />
-        <meta property="og:title" content="{{ page.meta.metaTitle }}" />
-        <meta property="og:description" content="{{ page.meta.metaDescription }}" />
+        {%include "page/gtm" %}
+        {%include "page/meta" %}
 
         <!-- CSS styles -->
         {{ "/css/normalize.css" | stylesheet_tag }}
         {{ "/css/skeleton.css" | stylesheet_tag }}
         {{ "/css/index.css" | stylesheet_tag }}
         
-        <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        {{ "https://fonts.googleapis.com/css?family=Jura" | stylesheet_tag: nonce }}
+        {{ "https://fonts.googleapis.com/css?family=Josefin+Sans" | stylesheet_tag: nonce }}
         <!--Font Awesome css load script-->
-        <script src="https://use.fontawesome.com/404ced7d8b.js"></script>
+        {{ "js/fa.js" | javascript_tag: nonce }}
 
     </head>
     <body class="blue-green-gradient">
@@ -30,6 +20,7 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJS9W2J"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+        
         <div id="top"></div>
         <div id="badge-line"></div>
         <div id="badge">
@@ -42,9 +33,9 @@
             <h2> Who </h2>
             {{ content.who }}
             <p>
-                <a class="expander" onclick="showBlock('#more-who', this)"><i class="fa fa-arrow-down"> More</i></a>
+                <a class="expander"><i class="fa fa-arrow-down"> More</i></a>
             </p>
-            <div id="more-who" class="fadeOut" style="display: none;">
+            <div id="more-who" class="more fadeOut">
                 {{ content.who-more }}
             </div>
         </section>
@@ -57,9 +48,9 @@
             <h2> What </h2>
             {{ content.what }}
              <p>
-                <a class="expander" onclick="showBlock('#more-what', this)"><i class="fa fa-arrow-down"> More</i></a>
+                <a class="expander"><i class="fa fa-arrow-down"> More</i></a>
             </p>
-            <div id="more-what" class="fadeOut" style="display: none;">
+            <div id="more-what" class="more fadeOut">
                 {{ content.what-more }}
             </div>
         </section>
@@ -68,9 +59,9 @@
             <h2> Why </h2>
             {{ content.why }}
             <p>
-                <a class="expander" onclick="showBlock('#more-why', this)"><i class="fa fa-arrow-down"> More</i></a>
+                <a class="expander"><i class="fa fa-arrow-down"> More</i></a>
             </p>
-            <div id="more-why" class="fadeOut" style="display: none;">
+            <div id="more-why" class="more fadeOut">
                 {{ content.why-more }}
             </div>
         </section>
@@ -80,8 +71,7 @@
         </section>
 
         <!-- JS scripts -->   
-        <script src="./js/index.js"></script>  
-        <script src="./js/modernizr-2.0.6.js"></script>
-        <script src="./js/animations.js"></script>  
+        {{ "./js/index.js" | javascript_tag: nonce }}
+        {{ "./js/animations.js" | javascript_tag: nonce }}
     </body>
 </html>

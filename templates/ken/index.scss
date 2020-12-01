@@ -5,6 +5,20 @@ $particle-size: 3px;
 $time: 14s; 
 $base-hue: 180; // change for diff colors (180 is nice)
 
+// initial state
+div[id*="more-"] {
+  display: none;
+}
+
+section#footer {
+  font-size: 0.7em;
+
+  a {
+    text-decoration: none;
+    color:white;
+  }
+}
+
 #animation-wrap {
   position: absolute;
   top: 10em;
