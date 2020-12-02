@@ -1,4 +1,4 @@
-{
+module.exports = {
     "ssl": {
         "enabled": true,
         "contentSecurityPolicy": {
