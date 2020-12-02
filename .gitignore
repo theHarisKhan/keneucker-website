@@ -46,3 +46,4 @@ config/users.json
 .DS_Store
 .greenlockrc
 config/greenlock.d
+config/config.json
