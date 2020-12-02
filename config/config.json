@@ -1,4 +1,5 @@
 {
+    "host": "keneucker.com",
     "ssl": {
         "enabled": true,
         "contentSecurityPolicy": {
