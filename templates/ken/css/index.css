@@ -163,14 +163,17 @@ hr.curl:before {
 }
 
 .fadeIn {
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out; 
+    display: inline !important;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out; 
+    height: 100%;
 }
 
 .fadeOut {
     opacity: 0;
+    height: 0;
 }
 
 .blue-green-gradient {

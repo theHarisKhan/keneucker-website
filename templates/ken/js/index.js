@@ -2,15 +2,17 @@
     if (!initialized) {
         function showBlock(target, a) {
             var target = document.querySelector(target);
-            if(target.className == "fadeOut") {
-                target.style.display = "";
-                target.className = "fadeIn";
+            if(target.classList.contains("fadeOut")) {
+                target.classList.remove("fadeOut")
+                target.classList.add("fadeIn")
+
                 a.childNodes[0].className = "fa fa-arrow-up";
                 a.childNodes[0].innerHTML = " Less";
             }
             else {
-                target.className = "fadeOut";
-                target.style.display = "none";
+                target.classList.add("fadeOut")
+                target.classList.remove("fadeIn")
+
                 a.childNodes[0].className = "fa fa-arrow-down";
                 a.childNodes[0].innerHTML = " More";
             }
