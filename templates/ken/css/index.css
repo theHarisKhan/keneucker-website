@@ -50,24 +50,6 @@ h1, h2 {
     font-size: 22px;
 }
 
-.icons {
-    font-size: 1.5em;
-    display: flex;
-    flex-direction: row;
-	margin-left: -18px;
-	pointer-events: all;	
-}
-
-.icons a {
-    color: white !important;    
-    margin-left: 0.5em;
-}
-
-.icons img {
-    max-height: 18px;
-    vertical-align: top;
-}
-
 .badge {
 	pointer-events: all;
 }
@@ -185,67 +167,6 @@ hr.curl:before {
     background: linear-gradient(to bottom right, #021828, #0B5A97) no-repeat; /* Standard syntax */
 }
 
-img.html-css-logo {
-    max-height: 100px;
-    margin-top: -15px;
-}
-
-img.mysql-logo {
-    max-height: 65px;
-}
-
-img.patreon-logo-mini {
-    margin-top: 6px;
-    margin-right: -2px;
-}
-
-img.cs-logo {
-    max-height: 20px;
-    vertical-align: top;
-    margin-top: 5px;
-}
-
-.devto-logo {
-    max-height: 22px;
-    vertical-align: top;
-    margin-top: 1px;
-    text-decoration: none;
-    font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
-    font-weight: bolder;
-    font-size: 20px;
-    letter-spacing: -1px;
-}
-
-img.redis-logo {
-    max-width:125px;
-}
-
-img.git-logo {
-    max-width:125px;
-    margin-top: 10px;
-}
-
-img.upwork-logo {
-    max-height: 22px;
-    vertical-align: top;
-    margin-top: 5px;
-    width: 25px;
-    height: 20px;
-}
-
-img.clevertech-logo {
-    display: block;
-    margin: 0 auto;
-    max-height: 150px;
-}
-
-img.clevertech-text {
-    border: none;
-    border-radius: unset !important;
-    display: block;
-    margin: 0 auto;
-}
-
 .icons a:nth-child(1) {
     margin-left: -0.25em;
 }
@@ -260,10 +181,15 @@ img.clevertech-text {
 
 #badge {
     position: fixed;
-    left: 35%;
-    top: 7%;
+    left: 30%;
+    top: 5%;
 	width: 100%;
 	pointer-events: none;
+}
+
+
+#why p.points {
+    font-size: 1.3rem;
 }
 
 img.badge-icon {
@@ -305,7 +231,7 @@ canvas#displayCanvas {
     transform: translate(57%);
     font-size: 1.5em;
     margin-top: -40px;
-	margin-left: 0;
+    margin-left: 25px;
 }
 
 .fix-badge-top-corner .icons a, .fix-badge-top-corner .icons a:nth-child(1) {
@@ -519,23 +445,28 @@ canvas#displayCanvas {
  /* Nexus 5X @ 412 x 732 */
  /* Nexus 6P @ 412 x 732 */
  /* iPhone 6 Plus @ 414 x 736 */
-@media (min-width: 412px) {
+@media (min-width: 411px) {
     canvas#displayCanvas {
         top: 650px;
+    }
+
+    #why p.points {
+        font-size: 1.6rem;
     }
 
     section {
         max-width: unset;        
         padding: 0 15px;
     }
-    #where {
+    #banner {
         position: relative;
     }
     #where h2 {
         position: relative;
     }
-    .current-role {
-        position: relative;
+    .current-role img {
+        display: block;
+        margin: 0 auto;
         z-index: 10;
     }
     .current-role img {
@@ -562,6 +493,10 @@ canvas#displayCanvas {
 @media (min-width: 550px) {
     canvas#displayCanvas {
         top: 600px;
+    }
+
+    #why p.points {
+        font-size: 1.5em;
     }
 
     img.react-logo {
@@ -627,6 +562,9 @@ canvas#displayCanvas {
 /* Bigger than 1024 */
  /* iPad Pro @ 1024 X 1366 */
 @media (min-width: 1024px) {
+    #badge {
+        top: 3%;
+    }
 
     .bubbles img {
         max-height: 150px;
@@ -651,16 +589,32 @@ canvas#displayCanvas {
 }
 
 /* Bigger than 1900 */
-@media (min-width: 1900px) {
-    section {
-        max-width: 900px;
+@media (min-width: 1921px) {
+    /* section {
+        max-width: 500px;
+        display: inline-block;
+        vertical-align: top;
     }
+    #footer {
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        right: 25%;
+        width: 100%;
+    }
+    .more {
+        display: inline !important;
+    } */
 }
 
 /* Bigger than 1900 */
 /* 4K */
 @media (min-width: 3800px) {
-    section {
-        width: 1200px;
+    /* body {
+        height: 100vh;
+        overflow: hidden;
     }
+    section {
+        max-width: 700px;
+    } */
 }

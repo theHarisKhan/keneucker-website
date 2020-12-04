@@ -2,7 +2,7 @@
 $total: 200; // total particles
 $orb-size: 200px;
 $particle-size: 3px;
-$time: 14s; 
+$time: 14s;
 $base-hue: 180; // change for diff colors (180 is nice)
 
 // initial state
@@ -10,12 +10,121 @@ div[id*="more-"] {
   display: none;
 }
 
-section#footer {
-  font-size: 0.7em;
+section {
+  p {
+    max-width: 90vw;
+  }
+  
+  #footer {
+    font-size: 0.7em;
+  
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+a.devto-logo {
+  max-height: 22px;
+  vertical-align: top;
+  text-decoration: none;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed",
+    "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed",
+    "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold",
+    "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosCnBold", "Helvetica",
+    "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+
+.icons {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  margin-left: -18px;
+  pointer-events: all;	
 
   a {
-    text-decoration: none;
-    color:white;
+    color: white !important;    
+    margin-left: 0.5em;
+  }
+
+  i {
+    height: 22px;
+  }
+
+  img, i, .icon-logo {
+    max-height: 20px;
+    vertical-align: text-top;
+  }
+}
+
+.bubbles {
+  img {
+    padding-bottom: 1em;
+    &.nodejs-logo {
+    }
+    &.ejs-logo {
+      height: 100px;
+    }
+    &.js-logo {
+      max-height: 70px;
+    }
+    &.html-css-logo {
+      max-height: 100px;
+      margin-top: -15px;
+    }
+    &.mysql-logo {
+      max-height: 65px;
+    }
+    &.patreon-logo-mini {
+      margin-top: 6px;
+      margin-right: -2px;
+    }
+    &.cs-logo {
+      max-height: 20px;
+      vertical-align: top;
+      margin-top: 5px;
+    }
+    &.typescript-logo {
+      max-height: 100px;
+      max-width: 15%;
+    }
+    &.coffeescript-logo {
+      max-height: 75px;
+      margin-top: 10px;
+      filter: invert(0%) sepia(69%) saturate(420%) hue-rotate(72deg) brightness(100%) contrast(666%);
+      max-width: 15%;
+    }
+    &.redis-logo {
+      max-width: 125px;
+    }
+    &.git-logo {
+      max-height: 125px;
+      margin-top: 10px;
+      max-width: 28%;
+    }
+    &.upwork-logo {
+      max-height: 22px;
+      vertical-align: top;
+      margin-top: 5px;
+      width: 25px;
+      height: 20px;
+    }
+    &.clevertech-logo {
+      display: block;
+      margin: 0 auto;
+      max-height: 150px;
+    }
+    &.clevertech-text {
+      border: none;
+      border-radius: unset !important;
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -23,8 +132,8 @@ section#footer {
   position: absolute;
   top: 10em;
   left: 50%;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   transform-style: preserve-3d;
   perspective: 1000px;
   animation: rotate $time infinite ease-in-out; // rotate orb
@@ -43,21 +152,22 @@ section#footer {
   width: $particle-size;
   height: $particle-size;
   border-radius: 50%;
-  opacity: 0; 
+  opacity: 0;
 }
 
 @for $i from 1 through $total {
   $z: (random(360) * 1deg); // random angle to rotateZ
   $y: (random(360) * 1deg); // random to rotateX
-  $hue: ((40/$total * $i) + $base-hue); // set hue
-  
-  #animation-wrap .c:nth-child(#{$i}){ // grab the nth particle
+  $hue: ((40 / $total * $i) + $base-hue); // set hue
+
+  #animation-wrap .c:nth-child(#{$i}) {
+    // grab the nth particle
     animation: orbit#{$i} $time infinite ease-in-out;
-    animation-delay: ($i * .01s); 
+    animation-delay: ($i * 0.01s);
     background-color: hsla($hue, 100%, 50%, 1);
   }
 
-  @keyframes orbit#{$i}{ 
+  @keyframes orbit#{$i} {
     20% {
       opacity: 1; // fade in
     }
@@ -69,7 +179,8 @@ section#footer {
       opacity: 1; // hold opacity 20-80
     }
     100% {
-       transform: rotateZ(-$z) rotateY($y) translateX( ($orb-size * 3) ) rotateZ($z); // translateX * 3
+      transform: rotateZ(-$z) rotateY($y) translateX(($orb-size * 3))
+        rotateZ($z); // translateX * 3
     }
   }
 }

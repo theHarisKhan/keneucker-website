@@ -43,16 +43,16 @@
             <div id="animation-wrap"></div>
             <h2> Where </h2>
             {{ content.where }}
+            <p>
+               <a class="expander"><i class="fa fa-arrow-down"> More</i></a>
+           </p>
+            <div id="more-where" class="more fadeOut">
+                {{ content.where-more }}
+            </div>
         </section>
         <section id="what">
             <h2> What </h2>
             {{ content.what }}
-             <p>
-                <a class="expander"><i class="fa fa-arrow-down"> More</i></a>
-            </p>
-            <div id="more-what" class="more fadeOut">
-                {{ content.what-more }}
-            </div>
         </section>
               
         <section id="why">
