@@ -21,5 +21,5 @@ module.exports = {
         "overrideViewEngine": ["liquid", "ejs"]
     },
 
-    "favicon": "img/KenEuckerLLCLogo.jpg"
+    // "favicon": "img/KenEuckerLLCLogo.jpg",
 }
