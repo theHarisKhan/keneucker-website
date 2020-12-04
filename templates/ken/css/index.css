@@ -418,7 +418,7 @@ canvas#displayCanvas {
         width: 150px;
     }
     .current-role img {
-        max-width: 200px;
+        max-width: 300px;
     }
     img.react-logo {
         max-height: 60px;
@@ -468,9 +468,7 @@ canvas#displayCanvas {
         display: block;
         margin: 0 auto;
         z-index: 10;
-    }
-    .current-role img {
-        max-height: 125px;
+        max-height: 175px;
     }
     #banner h1 {
         font-size: 5rem;    
@@ -548,7 +546,7 @@ canvas#displayCanvas {
         width: 750px;
     }
     .current-role img {
-        max-height: 175px;
+        max-height: 200px;
     }
     
     #badge {
