@@ -14,6 +14,7 @@
         {{ "https://fonts.googleapis.com/css?family=Josefin+Sans" | stylesheet_tag: nonce }}
         <!--Font Awesome css load script-->
         {{ "js/fa.js" | javascript_tag: nonce }}
+        {{ "js/tweenMax.js" | javascript_tag: nonce }}
 
     </head>
     <body class="blue-green-gradient">
@@ -27,6 +28,11 @@
         <div id="badge">
             {{ content.badges }}
         </div>
+        
+        <div id="animation">
+            {{ content.animation }}
+        </div>
+
         <section id="banner">
             {{ content.banner }}
         </section>
