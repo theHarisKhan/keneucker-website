@@ -1,41 +1,42 @@
 {
-  "name": "keneucker-website",
-  "version": "0.5.1",
-  "description": "A website for keneucker.com",
-  "author": "Ken Eucker <keneucker@gmail.com>",
-  "contributors": [],
-  "bin": {},
-  "scripts": {
-    "test": "mocha test.js",
-    "start": "node app.js",
-    "dev": "node app.js --debug=true",
-    "setglcoudid": "gcloud config set project keneucker-156821",
-    "server-logs": "sudo pm2 logs ken",
-    "server-update": "git pull",
-    "server-start": "sudo pm2 start app.js --name ken",
-    "server-restart": "sudo pm2 restart ken",
-    "server-stop": "sudo pm2 stop ken",
-    "server-rerun": "sudo pm2 delete ken && sudo pm2 start app.js --name ken",
-    "server-deploy": "npm run server-update && npm run server-restart && npm run server-logs"
-  },
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/KenEucker/keneucker-website.git"
-  },
-  "bugs": {
-    "url": "https://github.com/KenEucker/keneucker-website/issues"
-  },
-  "engines": {
-    "node": "12.x.x"
-  },
-  "keywords": [],
-  "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.2.1",
-    "sexpress": "^0.6.52",
-    "supertest": "^6.0.1"
-  },
-  "devDependencies": {},
-  "license": "Unlicense"
+    "name": "keneucker-website",
+    "version": "0.5.1",
+    "description": "A website for keneucker.com",
+    "author": "Ken Eucker <keneucker@gmail.com>",
+    "contributors": [],
+    "bin": {},
+    "scripts": {
+        "clean": "yarn prettier . --write",
+        "test": "mocha test.js",
+        "start": "node app.js",
+        "dev": "node app.js --debug=true",
+        "setglcoudid": "gcloud config set project keneucker-156821",
+        "server-logs": "sudo pm2 logs ken",
+        "server-update": "git pull",
+        "server-start": "sudo pm2 start app.js --name ken",
+        "server-restart": "sudo pm2 restart ken",
+        "server-stop": "sudo pm2 stop ken",
+        "server-rerun": "sudo pm2 delete ken && sudo pm2 start app.js --name ken",
+        "server-deploy": "npm run server-update && npm run server-restart && npm run server-logs"
+    },
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KenEucker/keneucker-website.git"
+    },
+    "bugs": {
+        "url": "https://github.com/KenEucker/keneucker-website/issues"
+    },
+    "keywords": [],
+    "dependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.2.1",
+        "prettier": "^2.2.1",
+        "sexpress": "^0.6.52",
+        "supertest": "^6.0.1"
+    },
+    "devDependencies": {
+        "prettier": "^2.2.1"
+    },
+    "license": "Unlicense"
 }

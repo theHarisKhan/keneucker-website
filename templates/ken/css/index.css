@@ -19,7 +19,7 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
-    color: #CDE4F5;
+    color: #cde4f5;
 }
 
 #top {
@@ -32,16 +32,17 @@ body {
 }
 
 #banner h1 {
-    font-size: 4rem;    
+    font-size: 4rem;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: transparent;
-    text-shadow: 2px 3px 2px #0F4A78, -2px 2px 2px #0B5A97;
+    text-shadow: 2px 3px 2px #0f4a78, -2px 2px 2px #0b5a97;
     /*border-radius: 2rem; */
-    background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); 
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgb(205, 228, 245);
 }
@@ -51,7 +52,7 @@ h1, h2 {
 }
 
 .badge {
-	pointer-events: all;
+    pointer-events: all;
 }
 
 .badge img {
@@ -94,54 +95,54 @@ hr {
 }
 
 hr.heart {
-	border-top: 4px double #8c8b8b;
-	text-align: center;
+    border-top: 4px double #8c8b8b;
+    text-align: center;
 }
 hr.heart:after {
-	content: '\002665';
-	display: inline-block;
-	position: relative;
-	top: -15px;
-	padding: 0 10px;
-	background: #f0f0f0;
-	color: #8c8b8b;
-	font-size: 18px;
+    content: '\002665';
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    color: #8c8b8b;
+    font-size: 18px;
 }
 hr.symbol {
-	border-top: 1px solid #8c8b8b;
-	text-align: center;
+    border-top: 1px solid #8c8b8b;
+    text-align: center;
 }
 hr.symbol:after {
-	content: '§';
-	display: inline-block;
-	position: relative;
-	top: -14px;
-	padding: 0 10px;
-	background: transparent;
-	color: #8c8b8b;
-	font-size: 18px;
-	-webkit-transform: rotate(60deg);
-	-moz-transform: rotate(60deg);
-	transform: rotate(60deg);
+    content: '§';
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    padding: 0 10px;
+    background: transparent;
+    color: #8c8b8b;
+    font-size: 18px;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
 }
 
-hr.curl { 
-  height: 30px; 
-  border-style: solid; 
-  border-color: #9DC3E0; 
-  border-width: 1px 0 0 0; 
-  border-radius: 20px; 
-  max-width: 60%;
-} 
-hr.curl:before { 
-  display: block; 
-  content: ""; 
-  height: 30px; 
-  margin-top: -31px; 
-  border-style: solid; 
-  border-color: #9DC3E0; 
-  border-width: 0 0 1px 0; 
-  border-radius: 20px; 
+hr.curl {
+    height: 30px;
+    border-style: solid;
+    border-color: #9dc3e0;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    max-width: 60%;
+}
+hr.curl:before {
+    display: block;
+    content: '';
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #9dc3e0;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 
 .fadeIn {
@@ -149,7 +150,7 @@ hr.curl:before {
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
-    -ms-transition: 1s ease-in-out; 
+    -ms-transition: 1s ease-in-out;
     height: 100%;
 }
 
@@ -161,10 +162,10 @@ hr.curl:before {
 .blue-green-gradient {
     background-size: cover;
     background: #021828; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top,#021828, #0B5A97) no-repeat; /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, #021828, #0B5A97) no-repeat; /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right,#021828, #0B5A97) no-repeat; /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #021828, #0B5A97) no-repeat; /* Standard syntax */
+    background: -webkit-linear-gradient(left top, #021828, #0b5a97) no-repeat; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #021828, #0b5a97) no-repeat; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #021828, #0b5a97) no-repeat; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #021828, #0b5a97) no-repeat; /* Standard syntax */
 }
 
 .icons a:nth-child(1) {
@@ -183,10 +184,9 @@ hr.curl:before {
     position: fixed;
     left: 30%;
     top: 5%;
-	width: 100%;
-	pointer-events: none;
+    width: 100%;
+    pointer-events: none;
 }
-
 
 #why p.points {
     font-size: 1.3rem;
@@ -234,7 +234,8 @@ canvas#displayCanvas {
     margin-left: 25px;
 }
 
-.fix-badge-top-corner .icons a, .fix-badge-top-corner .icons a:nth-child(1) {
+.fix-badge-top-corner .icons a,
+.fix-badge-top-corner .icons a:nth-child(1) {
     margin-left: 0em !important;
 }
 
@@ -248,86 +249,86 @@ canvas#displayCanvas {
 }
 
 .slideRight .badge {
-	animation-name: slideRightAndScaleDown;
-	-webkit-animation-name: slideRightAndScaleDown;	
+    animation-name: slideRightAndScaleDown;
+    -webkit-animation-name: slideRightAndScaleDown;
 
-	animation-duration: 0.4s;	
-	-webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
 
-	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
 
-	visibility: visible !important;	
+    visibility: visible !important;
 }
 
 .slideRight .icons {
-	animation-name: slideRightAndRotateCounterClockwise;
-	-webkit-animation-name: slideRightAndRotateCounterClockwise;	
+    animation-name: slideRightAndRotateCounterClockwise;
+    -webkit-animation-name: slideRightAndRotateCounterClockwise;
 
-	animation-duration: 0.5s;	
-	-webkit-animation-duration: 0.5s;
-    
-	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
 
-	visibility: visible !important;	
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+
+    visibility: visible !important;
 }
 
 @keyframes slideLeftAndScaleUp {
-	0% {
-		transform: scale(0.5) translateX(50%);
-	}
-	100% {
+    0% {
+        transform: scale(0.5) translateX(50%);
+    }
+    100% {
         transform: scale(1);
-	}
+    }
 }
 
 @-webkit-keyframes slideLeftAndScaleUp {
-	0% {
-		transform: scale(0.5) translateX(50%);
-	}
-	100% {
-		transform: scale(1);
-	}
+    0% {
+        transform: scale(0.5) translateX(50%);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes slideRightAndScaleDown {
-	0% {
-		transform: scale(1);
-	}
-	100% {
+    0% {
+        transform: scale(1);
+    }
+    100% {
         transform: scale(0.35) translate(53%);
-	}	
+    }
 }
 
 @-webkit-keyframes slideRightAndScaleDown {
-	0% {
-		transform: scale(1);
-	}			
-	100% {
-		transform: scale(0.35) translate(53%);
-	}	
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.35) translate(53%);
+    }
 }
 
 @keyframes slideLeftAndRotateClockwise {
-	0% {
+    0% {
         right: 0;
         display: flex;
         flex-direction: column;
         transform: translate(53%);
         margin-top: -40px;
     }
-	100% {
+    100% {
         display: flex;
         flex-direction: row;
         margin-left: -15px;
         margin-top: 0px;
-        transform: translate(0);        
-	}
+        transform: translate(0);
+    }
 }
 
 @-webkit-keyframes slideLeftAndRotateClockwise {
-	0% {
+    0% {
         right: 0;
         display: flex;
         flex-direction: column;
@@ -335,25 +336,25 @@ canvas#displayCanvas {
         margin-top: -40px;
     }
     99% {
-        flex-direction: row;        
+        flex-direction: row;
     }
-	100% {
+    100% {
         display: flex;
         flex-direction: row;
         margin-left: -15px;
         margin-top: 0px;
-	}
+    }
 }
 
 @keyframes slideRightAndRotateCounterClockwise {
-	0% {
+    0% {
         display: flex;
         flex-direction: row;
         margin-left: -15px;
         transform: translate(0%);
         margin-top: 0px;
-    }		
-	100% {
+    }
+    100% {
         right: 0;
         display: flex;
         flex-direction: column;
@@ -363,53 +364,53 @@ canvas#displayCanvas {
 }
 
 @-webkit-keyframes slideRightAndRotateCounterClockwise {
-	0% {
+    0% {
         display: flex;
         flex-direction: row;
         margin-left: -15px;
         transform: translate(0%);
         margin-top: 0px;
     }
-	100% {
+    100% {
         right: 0;
         display: flex;
         flex-direction: column;
         transform: translate(54%);
         margin-top: -40px;
-	}
+    }
 }
 
 .slideLeft .badge {
-	animation-name: slideLeftAndScaleUp;
-	-webkit-animation-name: slideLeftAndScaleUp;	
+    animation-name: slideLeftAndScaleUp;
+    -webkit-animation-name: slideLeftAndScaleUp;
 
-	animation-duration: 0.4s;	
-	-webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
 
-	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
 
-	visibility: visible !important;
+    visibility: visible !important;
 }
 
 .slideLeft .icons {
-	animation-name: slideLeftAndRotateClockwise;
-	-webkit-animation-name: slideLeftAndRotateClockwise;	
+    animation-name: slideLeftAndRotateClockwise;
+    -webkit-animation-name: slideLeftAndRotateClockwise;
 
-	animation-duration: 0.5s;	
-	-webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
 
-	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
 
     visibility: visible !important;
 }
 
 /* Bigger than 320 */
- /* iPhone 5 @ 320 x 568 */
+/* iPhone 5 @ 320 x 568 */
 @media (min-width: 320px) {
     img.mongodb-logo {
-        max-width:290px;
+        max-width: 290px;
     }
     .ig-view {
         max-width: 150px;
@@ -426,15 +427,15 @@ canvas#displayCanvas {
 }
 
 /* Bigger than 350 */
- /* Galaxy S5 5 @ 360 x 640 */
+/* Galaxy S5 5 @ 360 x 640 */
 @media (min-width: 360px) {
     img.mongodb-logo {
-        max-width:330px;
+        max-width: 330px;
     }
 }
 
 /* Bigger than 350 */
- /* iPhone 6 @ 375 x 667 */
+/* iPhone 6 @ 375 x 667 */
 @media (min-width: 375px) {
     canvas#displayCanvas {
         top: 750px;
@@ -442,9 +443,9 @@ canvas#displayCanvas {
 }
 
 /* Bigger than 412 */
- /* Nexus 5X @ 412 x 732 */
- /* Nexus 6P @ 412 x 732 */
- /* iPhone 6 Plus @ 414 x 736 */
+/* Nexus 5X @ 412 x 732 */
+/* Nexus 6P @ 412 x 732 */
+/* iPhone 6 Plus @ 414 x 736 */
 @media (min-width: 411px) {
     canvas#displayCanvas {
         top: 650px;
@@ -455,7 +456,7 @@ canvas#displayCanvas {
     }
 
     section {
-        max-width: unset;        
+        max-width: unset;
         padding: 0 15px;
     }
     #banner {
@@ -471,7 +472,7 @@ canvas#displayCanvas {
         max-height: 175px;
     }
     #banner h1 {
-        font-size: 5rem;    
+        font-size: 5rem;
     }
 
     h2 {
@@ -503,7 +504,7 @@ canvas#displayCanvas {
         padding: 1em;
     }
     img.mongodb-logo {
-        max-width:370px;
+        max-width: 370px;
     }
     section {
         max-width: 600px;
@@ -514,13 +515,12 @@ canvas#displayCanvas {
         font-size: 6rem;
     }
     #banner h1 {
-        font-size: 7rem;    
+        font-size: 7rem;
     }
 
     #badge {
         left: 40%;
     }
-
 }
 
 /* Bigger than 750 */
@@ -540,7 +540,7 @@ canvas#displayCanvas {
 }
 
 /* Bigger than 768 */
- /* iPad @ 768 x 1024 */
+/* iPad @ 768 x 1024 */
 @media (min-width: 768px) {
     section {
         width: 750px;
@@ -548,7 +548,7 @@ canvas#displayCanvas {
     .current-role img {
         max-height: 200px;
     }
-    
+
     #badge {
         left: 44%;
     }
@@ -558,7 +558,7 @@ canvas#displayCanvas {
 }
 
 /* Bigger than 1024 */
- /* iPad Pro @ 1024 X 1366 */
+/* iPad Pro @ 1024 X 1366 */
 @media (min-width: 1024px) {
     #badge {
         top: 3%;
@@ -567,12 +567,11 @@ canvas#displayCanvas {
     .bubbles img {
         max-height: 150px;
     }
-    
+
     img.git-logo {
         max-width: 200px;
         margin-top: 0;
     }
-
 }
 
 /* Bigger than 1240 */
