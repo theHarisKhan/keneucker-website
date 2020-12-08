@@ -19,12 +19,15 @@
         }
         
         function hideMore(target, a) {
-            var target = document.querySelector(target), 
-                a = document.querySelector(a);
-            target.className = "fadeOut";
-            target.style.display = "none";
-            a.childNodes[0].className = "fa fa-arrow-down";
-            a.childNodes[0].innerHTML = " More";
+            const targetElement = document.querySelector(target)
+            const aElement = document.querySelector(a)
+
+            if (!(targetElement && aElement )) return
+            
+            targetElement.className = "fadeOut";
+            targetElement.style.display = "none";
+            aElement.childNodes[0].className = "fa fa-arrow-down";
+            aElement.childNodes[0].innerHTML = " More";
         }
         
         function onScrollMoveBadge() {
@@ -68,6 +71,7 @@
                 badge.classList.add("slideLeft");
         
                 hideMore("#more-why","#why a.expander");
+                hideMore("#more-where","#where a.expander");
                 hideMore("#more-who","#who a.expander");
                 hideMore("#more-what","#what a.expander");
             }

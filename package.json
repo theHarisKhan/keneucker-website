@@ -1,6 +1,6 @@
 {
   "name": "keneucker-website",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A website for keneucker.com",
   "author": "Ken Eucker <keneucker@gmail.com>",
   "contributors": [],
@@ -33,7 +33,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
-    "sexpress": "^0.6.48",
+    "sexpress": "^0.6.52",
     "supertest": "^6.0.1"
   },
   "devDependencies": {},

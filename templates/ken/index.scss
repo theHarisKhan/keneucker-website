@@ -15,12 +15,16 @@ section {
     max-width: 90vw;
   }
   
-  #footer {
+  &#footer {
     font-size: 0.7em;
   
     a {
       text-decoration: none;
       color: white;
+    }
+
+    i.fa {
+      color:rgb(238,117,189);
     }
   }
 }
