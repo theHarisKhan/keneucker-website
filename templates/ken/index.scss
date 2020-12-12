@@ -36,6 +36,19 @@ section {
     }
 }
 
+.sexpress-logo {
+    display: block;
+    margin: 0 auto;
+    filter: invert(1) blur(0.4px) brightness(1.1) drop-shadow(2px 4px 6px black);
+}
+
+.biketag-logo {
+    display: block;
+    margin: 0 auto;
+    max-height: 4em;
+    height: 90px;
+}
+
 a.devto-logo {
     max-height: 22px;
     vertical-align: top;
