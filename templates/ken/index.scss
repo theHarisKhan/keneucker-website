@@ -68,9 +68,12 @@ a.devto-logo {
     flex-direction: row;
     margin-left: -18px;
     pointer-events: all;
+    // width: 50%;
+    // margin: auto;
 
     a {
         color: white !important;
+        // padding-left: 0.5em;
         margin-left: 0.5em;
     }
 
@@ -87,8 +90,13 @@ a.devto-logo {
 }
 
 .bubbles {
+    display: flex;
+    flex-flow: wrap;
+    gap: 1em;
+    padding-bottom: 3em;
+
     img {
-        padding-bottom: 1em;
+        align-self: flex-end;
         &.nodejs-logo {
         }
         &.ejs-logo {
@@ -102,7 +110,8 @@ a.devto-logo {
             margin-top: -15px;
         }
         &.mysql-logo {
-            max-height: 65px;
+            height: 100px;
+            max-height: 10rem;
         }
         &.patreon-logo-mini {
             margin-top: 6px;
@@ -114,20 +123,24 @@ a.devto-logo {
             margin-top: 5px;
         }
         &.liquidjs-logo {
-            max-height: 85px;
-            max-width: 100px;
-            vertical-align: bottom;
+            max-height: 8rem;
+            width: 80px;
+            height: 85px;
         }
         &.typescript-logo {
-            max-height: 100px;
-            max-width: 15%;
+            max-height: 85px;
+            max-width: 22%;
+        }
+        &.php-logo {
+            max-height: 10rem;
+            height: 115px;
         }
         &.coffeescript-logo {
             max-height: 75px;
             margin-top: 10px;
             filter: invert(0%) sepia(69%) saturate(420%) hue-rotate(72deg) brightness(100%)
                 contrast(666%);
-            max-width: 15%;
+            max-width: 25%;
         }
         &.redis-logo {
             max-width: 125px;
@@ -202,6 +215,18 @@ rect {
 
 .blob {
     fill: white;
+}
+
+.fix-badge-top-corner {
+    .icons {
+        // margin-top: -50px;
+        // margin-left: -75px;
+
+        a {
+            // margin-left: 0.5em;
+            // transform: scale(0.85);
+        }
+    }
 }
 
 #animation {

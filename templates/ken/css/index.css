@@ -58,12 +58,15 @@ h2 {
 .badge img {
     max-height: 150px;
     border-radius: 10%;
+    /* margin: auto; */
+    /* display: block; */
 }
 
 .bubbles img {
     vertical-align: top;
     max-height: 75px;
     max-width: 230px;
+    /* margin-left: 1em; */
 }
 
 .blocks span {
@@ -219,6 +222,11 @@ canvas#displayCanvas {
 .expander {
     cursor: pointer;
 }
+
+/* #badge.fix-badge-top-corner {
+    position: fixed;
+    width: 0;
+} */
 
 .fix-badge-top-corner {
     top: -5% !important;
@@ -504,7 +512,7 @@ canvas#displayCanvas {
         padding: 1em;
     }
     img.mongodb-logo {
-        max-width: 370px;
+        max-width: 345px;
     }
     section {
         max-width: 600px;
@@ -566,6 +574,7 @@ canvas#displayCanvas {
 
     .bubbles img {
         max-height: 150px;
+        /* margin-left: unset; */
     }
 
     img.git-logo {
