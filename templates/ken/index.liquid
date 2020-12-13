@@ -5,16 +5,16 @@
         {%include "page/meta" %}
 
         <!-- CSS styles -->
-        {{ "/css/normalize.css" | stylesheet_tag }}
-        {{ "/css/skeleton.css" | stylesheet_tag }}
+        {{ "/css/normalize.css" | stylesheet_tag: null, true }}
+        {{ "/css/skeleton.css" | stylesheet_tag: null, true }}
+        {{ "/css/font-awesome.min.css" | stylesheet_tag: null, true }}
         {{ "/css/index.css" | stylesheet_tag }}
-        {{ "/css/font-awesome.min.css" | stylesheet_tag }}
         
         {{ "https://fonts.googleapis.com/css?family=Jura" | stylesheet_tag: nonce }}
         {{ "https://fonts.googleapis.com/css?family=Josefin+Sans" | stylesheet_tag: nonce }}
         <!--Font Awesome css load script-->
-        {{ "js/fa.js" | javascript_tag: nonce }}
-        {{ "js/tweenMax.js" | javascript_tag: nonce }}
+        {{ "js/fa.js" | javascript_tag: nonce, true }}
+        {{ "js/tweenMax.js" | javascript_tag: nonce, true }}
 
     </head>
     <body class="blue-green-gradient">
