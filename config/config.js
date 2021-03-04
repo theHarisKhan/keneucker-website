@@ -1,6 +1,7 @@
 module.exports = {
     ssl: {
         enabled: true,
+        strategy: 'greenlock',
         contentSecurityPolicy: {
             directives: {
                 scriptSrc: [
