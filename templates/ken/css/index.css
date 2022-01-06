@@ -208,7 +208,13 @@ canvas#displayCanvas {
 }
 
 .current-role img {
-    border-radius: 20px;
+    /* border-radius: 20px; */
+}
+
+.imgur-logo {
+    display: block;
+    margin: auto;
+    max-width: 150px;
 }
 
 .hidden {
