@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function TimeLineBox(props) {
   return (
@@ -9,10 +9,13 @@ function TimeLineBox(props) {
           alt={props?.title}
           width={15}
           height={15}
-          layout="responsive"
-          objectFit="contain"
           blurDataURL="data:..."
-        />
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain"
+          }} />
       </div>
       <div className="atb-info">
         <h3>{props?.title}</h3>

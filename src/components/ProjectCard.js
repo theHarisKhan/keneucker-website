@@ -1,13 +1,13 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function ProjectCard(props) {
   return (
     <div className="project-card">
       <div className="pct-thumbnail">
-        <Image 
+        <Image
           src={props?.img}
-          alt={props?.img} 
-        />
+          alt={props?.img}
+          fill={true} />
       </div>
       <div className="project-card-info">
         <h3>{props?.title}</h3>
@@ -27,8 +27,11 @@ function ProjectCard(props) {
                 <span>Live</span>
                 <Image
                   src="/img/icons8-linking.svg"
-                  alt="icons8-linking" 
-                />
+                  alt="icons8-linking"
+                  fill={true}
+                  style={{
+                    maxWidth: "20px"
+                  }} />
               </span>
             </button>
           </a>

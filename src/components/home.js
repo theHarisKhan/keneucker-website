@@ -1,4 +1,5 @@
-import Image from "next/legacy/image";
+/* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
 
 function Home() {
   return (
@@ -18,7 +19,13 @@ function Home() {
             <button className="push-btn" style={{"background": 'hsl(0deg 95% 25%)'}}>
               <span className="btn-front" style={{"background": '#ff0000'}}>
                 <span>Resume</span>
-                <Image src="/img/pdf-icon.svg" alt="pdf icon" />
+                <Image
+                  src="/img/pdf-icon.svg"
+                  alt="pdf icon"
+                  fill={true}
+                  style={{
+                    maxWidth: "100%",
+                  }} />
               </span>
             </button>
           </a>
@@ -28,6 +35,7 @@ function Home() {
             <Image
               src="/img/ken_eucker_boom_headshot_cropped-removebg.png"
               alt="Ken Eucker Profile Image"
+              fill={true}
             />
           </div>
         </div>
