@@ -17,13 +17,13 @@
 .poem > div.readit-block {
   height: 100%;
 }
-.poem > div.readit-block p {
-  /* columns: 2; */
+.poem > div.readit-block > div {
+  columns: 2;
 }
 .poem > div.readit-block::after {
   display: none;
 }
-.poem > div p {
+.poem > div > div {
   font-size: 18px;
   columns: 1;
   column-gap: 50px;
@@ -48,7 +48,8 @@
 }
 
 .poem-wrapper {
-  max-width: 615px;
+  max-width: 80vw;
+  text-align: center;
   margin: 0 auto;
   display: flex;
   justify-content: center;
