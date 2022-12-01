@@ -1,10 +1,14 @@
+import Image from "next/image";
+
 function AboutInfo() {
   return (
     <div className="about-img">
       <div className="about-thumbnail">
-        <img
-          src="/ken_eucker_super_nerd.gif"
+        <Image
+          src="/img/ken_eucker_boom_headshot.png"
           alt="ken_eucker_boom_headshot_cropped"
+          width={100}
+          height={100}
         />
       </div>
       <h2>Ken Eucker</h2>
@@ -14,9 +18,11 @@ function AboutInfo() {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="/patreon-logo-new.png"
+          <Image
+            src="/img/patreon-logo-new.png"
             alt="patreon-logo"
+            width={100}
+            height={100}
           />
         </a>
         <a
@@ -24,9 +30,11 @@ function AboutInfo() {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="/upwork-logo.png"
+          <Image
+            src="/img/upwork-logo.png"
             alt="upwork-logo"
+            width={100}
+            height={100}
           />
         </a>
         <a
@@ -34,9 +42,11 @@ function AboutInfo() {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="/Github.svg"
+          <Image
+            src="/img/Github.svg"
             alt="Github"
+            width={100}
+            height={100}
           />
         </a>
         <a
@@ -44,9 +54,11 @@ function AboutInfo() {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="/Linkedin.svg"
+          <Image
+            src="/img/Linkedin.svg"
             alt="linkedIn"
+            width={100}
+            height={100}
           />
         </a>
         <a
@@ -54,9 +66,11 @@ function AboutInfo() {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="/cs-logo-reverse.png"
+          <Image
+            src="/img/cs-logo-reverse.png"
             alt="cs-logo-reverse"
+            width={100}
+            height={100}
           />
         </a>
         <a
@@ -64,9 +78,11 @@ function AboutInfo() {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="/devto-svg.svg"
+          <Image
+            src="/img/devto-svg.svg"
             alt="devto"
+            width={100}
+            height={100}
           />
         </a>
       </div>

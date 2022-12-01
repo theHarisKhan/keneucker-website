@@ -6,28 +6,6 @@
   align-items: center;
 }
 
-.poem h2 {
-  font-size: 56px;
-  position: relative;
-  text-align: center;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.poem h2::after {
-  content: "";
-  position: absolute;
-  height: 70px;
-  width: 140px;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  transform: rotate(-5deg);
-  background-color: #2f3061;
-  z-index: -1;
-}
-
 .poem > div {
   position: relative;
   padding: 50px 0;
@@ -40,7 +18,7 @@
   height: 100%;
 }
 .poem > div.readit-block p {
-  columns: 2;
+  /* columns: 2; */
 }
 .poem > div.readit-block::after {
   display: none;
@@ -69,14 +47,19 @@
   width: 250px;
 }
 
+.poem-wrapper {
+  max-width: 615px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px 15px;
+}
+
 @media (max-width: 767px) {
   .poem {
     padding-bottom: 0px;
     align-items: flex-start;
-  }
-  .poem h2 {
-    text-align: left;
-    margin: 0;
   }
   .poem > div p,
   .poem > div.readit-block p {

@@ -249,3 +249,26 @@ textarea:focus {
     text-align: left;
   }
 }
+
+
+h2.bold {
+  font-size: 56px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+h2.bold::after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(-5deg);
+  background-color: #2f3061;
+  z-index: -1;
+}

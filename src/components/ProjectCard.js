@@ -1,8 +1,15 @@
+import Image from "next/image";
+
 function ProjectCard(props) {
   return (
     <div className="project-card">
       <div className="pct-thumbnail">
-        <img src={props?.img} alt={props?.img} />
+        <Image 
+          src={props?.img}
+          alt={props?.img} 
+          width={100}
+          height={100}
+        />
       </div>
       <div className="project-card-info">
         <h3>{props?.title}</h3>
@@ -20,7 +27,12 @@ function ProjectCard(props) {
             <button className="push-btn">
               <span className="btn-front">
                 <span>Live</span>
-                <img src="/icons8-linking.svg" alt="icons8-linking" />
+                <Image
+                  src="/img/icons8-linking.svg"
+                  alt="icons8-linking" 
+                  width={100}
+                  height={100}
+                />
               </span>
             </button>
           </a>

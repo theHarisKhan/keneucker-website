@@ -16,6 +16,7 @@
   width: 400px;
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
   background-color: var(--link-clr);
   border-radius: 44% 56% 20% 80% / 55% 16% 84% 45%;

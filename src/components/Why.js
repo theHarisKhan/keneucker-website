@@ -5,9 +5,9 @@ export default function Why() {
 
   return (
     <div className="poem">
-      <h2>Why</h2>
-      <div className={`${readmore && 'readit-block'}`}>
-        <p>
+      <h2 class="bold">Why</h2>
+      <div className={`${readmore ? 'readit-block' : ''} poem-wrapper`}>
+        <div>
           <ul>
             <li style={{ color: "yellow" }}>
               Began writing poems at the age of 12 in 1999.
@@ -28,14 +28,16 @@ export default function Why() {
               Freelanced full time and went traveling in 2014.
             </li>
             <li style={{ color: "#ff7a00" }}>
-              Dedicated life to Open Source software in 2016.
+              Dedicated career to Open Source software in 2016.
             </li>
             <li style={{ color: "#f054ff" }}>
               Worked at a digital media publication in 2018.
             </li>
-            <li style={{ color: "#ffffff" }}>
-              Digital nomad, full time, 100% remote, and travelling the globe in
-              2020. writing code indoors, mostly.
+            <li style={{ color: "#b90e0a" }}>
+              Went full-time digital nomad, 100% remote, in 2020.
+            </li>
+            <li style={{ color: "#00ff00" }}>
+              Worked at a digital product consultancy in 2022.
             </li>
           </ul>
           <br />
@@ -90,11 +92,11 @@ export default function Why() {
           proprietary grips of companies who have no interest in evolving the
           code and to see original author accreditations go to those who put
           fingers to keyboards.
-        </p>
+        </div>
       </div>
         <button className="push-btn" onClick={() => setReadMore(!readmore)}>
           <span className="btn-front">
-            <span>{!readmore ? 'Read More' : 'Close it'}</span>
+            <span>{readmore ? 'Close it' : 'Read More'}</span>
           </span>
         </button>
     </div>

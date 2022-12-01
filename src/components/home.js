@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
+
 function Home() {
   return (
     <div className="home-section">
@@ -12,20 +15,22 @@ function Home() {
             candid photographs, and talk about the intersection of technology
             and psychology.
           </p>
-          <a href="/Ken_Eucker_Resume_2022.pdf" download>
+          <a href="/Ken_Eucker_Resume_2022.pdf" download={true}>
             <button className="push-btn" style={{"background": 'hsl(0deg 95% 25%)'}}>
               <span className="btn-front" style={{"background": '#ff0000'}}>
                 <span>Resume</span>
-                <img src="/pdf-icon.svg" alt="pdf icon" />
+                <Image src="/img/pdf-icon.svg" alt="pdf icon" width={100} height={100}/>
               </span>
             </button>
           </a>
         </div>
         <div className="hs-thumbnail">
           <div className="hs-bolb">
-            <img
-              src="/ken_eucker_boom_headshot_cropped-removebg.png"
+            <Image
+              src="/img/ken_eucker_boom_headshot_cropped-removebg.png"
               alt="Ken Eucker Profile Image"
+              width={100}
+              height={100}
             />
           </div>
         </div>
