@@ -77,7 +77,7 @@ function About() {
       </div>
       )}
       <div className="about-timeline">
-        <h2 class="bold">Where</h2>
+        <h2 className="bold">Where</h2>
         <div className="about-flex">
           <div className="about-col">
             <TimeLineBox
@@ -138,7 +138,7 @@ function About() {
         </div>
       </div>
       <div className="about-skills">
-        <h2 class="bold">What</h2>
+        <h2 className="bold">What</h2>
         <div className="skills-wrapper">
           <div className="skill-thumbnail">
             <Image

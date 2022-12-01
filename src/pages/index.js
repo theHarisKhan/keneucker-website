@@ -2,8 +2,9 @@ import Home from "../components/home";
 import About from "../components/about";
 import Head from "next/head";
 import Why from "../components/Why";
+import How from "../components/How";
 import BottomDiv from "../components/BottomDiv";
-import Projects from "../components/projects";
+import Projects from "../components/Projects";
 
 function index() {
   return (
@@ -33,6 +34,7 @@ function index() {
       <About />
       <Projects />
       <Why />
+      <How />
       <BottomDiv />
     </>
   );

@@ -5,7 +5,7 @@ export default function Why() {
 
   return (
     <div className="poem">
-      <h2 class="bold">Why</h2>
+      <h2 className="bold">Why</h2>
       <div className={`${readmore ? 'readit-block' : ''} poem-wrapper`}>
         <div>
           <ul>
