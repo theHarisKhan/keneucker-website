@@ -7,8 +7,6 @@ function AboutInfo() {
         <Image
           src="/img/ken_eucker_boom_headshot.png"
           alt="ken_eucker_boom_headshot_cropped"
-          width={100}
-          height={100}
         />
       </div>
       <h2>Ken Eucker</h2>
@@ -21,8 +19,6 @@ function AboutInfo() {
           <Image
             src="/img/patreon-logo-new.png"
             alt="patreon-logo"
-            width={100}
-            height={100}
           />
         </a>
         <a
@@ -33,8 +29,6 @@ function AboutInfo() {
           <Image
             src="/img/upwork-logo.png"
             alt="upwork-logo"
-            width={100}
-            height={100}
           />
         </a>
         <a
@@ -45,8 +39,6 @@ function AboutInfo() {
           <Image
             src="/img/Github.svg"
             alt="Github"
-            width={100}
-            height={100}
           />
         </a>
         <a
@@ -57,8 +49,6 @@ function AboutInfo() {
           <Image
             src="/img/Linkedin.svg"
             alt="linkedIn"
-            width={100}
-            height={100}
           />
         </a>
         <a
@@ -69,8 +59,6 @@ function AboutInfo() {
           <Image
             src="/img/cs-logo-reverse.png"
             alt="cs-logo-reverse"
-            width={100}
-            height={100}
           />
         </a>
         <a
@@ -81,8 +69,6 @@ function AboutInfo() {
           <Image
             src="/img/devto-svg.svg"
             alt="devto"
-            width={100}
-            height={100}
           />
         </a>
       </div>

@@ -7,8 +7,6 @@ function ProjectCard(props) {
         <Image 
           src={props?.img}
           alt={props?.img} 
-          width={100}
-          height={100}
         />
       </div>
       <div className="project-card-info">
@@ -30,8 +28,6 @@ function ProjectCard(props) {
                 <Image
                   src="/img/icons8-linking.svg"
                   alt="icons8-linking" 
-                  width={100}
-                  height={100}
                 />
               </span>
             </button>

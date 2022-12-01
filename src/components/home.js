@@ -18,7 +18,7 @@ function Home() {
             <button className="push-btn" style={{"background": 'hsl(0deg 95% 25%)'}}>
               <span className="btn-front" style={{"background": '#ff0000'}}>
                 <span>Resume</span>
-                <Image src="/img/pdf-icon.svg" alt="pdf icon" width={100} height={100}/>
+                <Image src="/img/pdf-icon.svg" alt="pdf icon" />
               </span>
             </button>
           </a>
@@ -28,8 +28,6 @@ function Home() {
             <Image
               src="/img/ken_eucker_boom_headshot_cropped-removebg.png"
               alt="Ken Eucker Profile Image"
-              width={100}
-              height={100}
             />
           </div>
         </div>
