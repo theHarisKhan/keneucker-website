@@ -1,12 +1,13 @@
-.poem {
+.why-section {
   padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
-.poem > div {
+.why-section > div {
   position: relative;
   padding: 50px 0;
   height: 530px;
@@ -14,25 +15,22 @@
   transition: height 0.5s all;
 }
 
-.poem > div.readit-block {
+.why-section > div.readit-block {
   height: 100%;
 }
-.poem > div.readit-block .readmore-content {
-  columns: 2;
-}
-.poem > div.readit-block::after {
+.why-section > div.readit-block::after {
   display: none;
 }
-.poem > div > div {
+.why-section > div > div {
   font-size: 18px;
   columns: 1;
   column-gap: 50px;
   margin-bottom: 40px;
 }
-.poem ul {
+.why-section ul {
   list-style-type: none;
 }
-.poem > div::after {
+.why-section > div::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -44,12 +42,12 @@
   background: linear-gradient(0deg, rgb(0, 0, 0), transparent);
 }
 
-.poem .push-btn {
+.why-section .push-btn {
   margin-top: -45px;
   width: 250px;
 }
 
-.poem-wrapper {
+.why-section-wrapper {
   max-width: 80vw;
   text-align: center;
   margin: 0 auto;
@@ -58,15 +56,23 @@
   flex-wrap: wrap;
   gap: 30px 15px;
 }
+.why-section {
+  margin-bottom: 25px;
+}
 
 @media (max-width: 767px) {
-  .poem {
+  .why-section {
     padding-bottom: 0px;
     align-items: flex-start;
   }
-  .poem > div p,
-  .poem > div.readit-block p {
+  .why-section > div p,
+  .why-section > div.readit-block p {
     columns: 1;
     column-gap: 0;
+  }
+}
+@media (min-width: 767px) {
+  .why-section > div.readit-block .readmore-content {
+    columns: 2;
   }
 }

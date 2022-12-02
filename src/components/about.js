@@ -49,7 +49,7 @@ function About() {
         </div>
       </div>
       {readMoreOpen && (
-      <div className="about-info-2">
+      <div className="about-info-more">
         <p>
         I am a writer; I write in human languages and in machine languages. I
         like writing poetry and short stories. I like writing blogs and

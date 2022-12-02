@@ -3,6 +3,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  columns: 2;
+}
+
+.projects-section.preview {
+  columns: 1;
 }
 
 .project-card {

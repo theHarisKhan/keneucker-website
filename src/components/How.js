@@ -47,7 +47,13 @@ export default function How() {
         target="_blank"
         rel="noreferrer"
       >
-        <img src="/img/octocat-for-sponsors.png" alt="sponsor me on github" />
+        <Image
+          src="/img/octocat-for-sponsors.png"
+          alt="sponsor me on github"
+          objectFit="cover"
+          height={40}
+          width={25}
+        />
         <span>Sponsor me on Github</span>
       </a>
     </div>

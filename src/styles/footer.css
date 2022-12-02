@@ -1,4 +1,4 @@
-.bottom-footer{
+.footer{
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     padding: 10px 0px;
@@ -10,7 +10,7 @@
     margin-bottom: 20px;
 }
 
-.bottom-footer > p{
+.footer > p{
     max-width: 56%;
     margin: 0 auto;
     text-align: 22px;
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 767px) {
-    .bottom-footer > p{
+    .footer > p{
         max-width: 100%;
         text-align: center;
     }

@@ -5,7 +5,7 @@ export default function Why() {
   const [readmore, setReadMore] = useState(false);
 
   return (
-    <div className="poem">
+    <div className="why-section">
       <h2 className="bold">Why</h2>
       <div className={`${readmore ? 'readit-block' : ''} poem-wrapper`}>
         <div>
