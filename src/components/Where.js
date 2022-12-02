@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
+import Image from "next/legacy/image";
 import TimeLineBox from "./TimeLineBox";
 import { useState } from "react";
 

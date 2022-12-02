@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import SocialLinks from "./SocialLinks";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 
 function About() {

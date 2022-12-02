@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 function Skills() {
   return (   
