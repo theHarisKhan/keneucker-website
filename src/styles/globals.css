@@ -6,12 +6,12 @@
 @import url("about.css");
 @import url("timeline.css");
 /* pages */
-@import url("home.css");
+@import url("intro.css");
 @import url("about.css");
 @import url('why.css');
 @import url('how.css');
 @import url('projects.css');
-@import url('bottom.css');
+@import url('footer.css');
 * {
   padding: 0;
   margin: 0;

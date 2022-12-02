@@ -1,9 +1,9 @@
-.about-timeline-box {
+.timeline-box {
   position: relative;
   padding: 0 20px 0 90px;
 }
 
-.about-timeline-box:before {
+.timeline-box:before {
   content: "";
   position: absolute;
   width: 2px;
@@ -62,12 +62,12 @@
 }
 
 @media (max-width: 425px) {
-  .about-timeline-box {
+  .timeline-box {
     padding-left: 0;
     padding-right: 0;
   }
 
-  .about-timeline-box:before {
+  .timeline-box:before {
     height: 2px;
     width: 150px;
     top: 25px;

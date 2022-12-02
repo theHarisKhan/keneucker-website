@@ -1,10 +1,11 @@
-import Home from "../components/home";
-import About from "../components/about";
 import Head from "next/head";
+import Intro from "../components/Intro";
+import About from "../components/About";
 import Why from "../components/Why";
 import How from "../components/How";
-import BottomDiv from "../components/BottomDiv";
-import Projects from "../components/Projects";
+import What from "../components/What";
+import Where from "../components/Where";
+import Footer from "../components/Footer";
 
 function index() {
   return (
@@ -30,12 +31,13 @@ function index() {
       </Head>
 
       {/* Components */}
-      <Home />
+      <Intro />
       <About />
-      <Projects />
+      <Where />
+      <What />
       <Why />
       <How />
-      <BottomDiv />
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,4 @@
-.home-section {
+.intro-section {
   padding: 100px 0;
   height: 100%;
   display: grid;
@@ -52,7 +52,7 @@
 }
 
 @media (max-width: 590px) {
-  .home-section {
+  .intro-section {
     padding: 50px 0;
   }
   .hs-wrapper {

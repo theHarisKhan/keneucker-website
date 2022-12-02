@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 
 export default function Why() {
@@ -40,6 +41,8 @@ export default function Why() {
               Worked at a digital product consultancy in 2022.
             </li>
           </ul>
+        </div>
+        <div className="readmore-content">
           <br />
           <br />
           I began writing code at the age of 14, making scripts for IRC and
@@ -59,8 +62,8 @@ export default function Why() {
           My first experience in the industry was with a web development agency
           in downtown Portland, Oregon. I was working on an ASP.NET CMS
           framework that was in use by several clients for their e-commerce
-          websites. A year later the agency dissolved and I quickly formed my
-          own LLC to be able to freelance my skills and talents. Determined to
+          websites. A year later the agency dissolved and I formed my own LLC 
+          to be able to freelance my skills and talents. Determined to
           continue to be a part of a dev team I began working for a product
           company, also on the .NET stack, and was brought onto their systems
           team to focus on their web portal. Following my time with that company
@@ -92,11 +95,21 @@ export default function Why() {
           proprietary grips of companies who have no interest in evolving the
           code and to see original author accreditations go to those who put
           fingers to keyboards.
+          <br />
+          <br />
+          At the beginning of 2021 I knew that I needed to make some big changes
+          in my life, but I didn't know where I would end up. In July of 2021, I 
+          moved into a 22 foot airstream travel trailer and parked it in the 
+          Black Rock Desert while I volunteered in the are. One month later I 
+          had purchased property with the intent to build a house. Flash forward 
+          to the end of the year in 2022 and instead of building a new house, I
+          got a double-wide put onto the property and then left the desert to 
+          travel some more.
         </div>
       </div>
         <button className="push-btn" onClick={() => setReadMore(!readmore)}>
           <span className="btn-front">
-            <span>{readmore ? 'Close it' : 'Read More'}</span>
+            <span>{readmore ? 'Close' : 'Read More'}</span>
           </span>
         </button>
     </div>

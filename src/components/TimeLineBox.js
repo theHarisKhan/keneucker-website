@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function TimeLineBox(props) {
   return (
-    <div className="about-timeline-box">
+    <div className="timeline-box">
       <div className="atb-thumbnail">
         <Image
           src={props?.img}

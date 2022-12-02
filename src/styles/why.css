@@ -17,7 +17,7 @@
 .poem > div.readit-block {
   height: 100%;
 }
-.poem > div.readit-block > div {
+.poem > div.readit-block .readmore-content {
   columns: 2;
 }
 .poem > div.readit-block::after {
@@ -29,7 +29,9 @@
   column-gap: 50px;
   margin-bottom: 40px;
 }
-
+.poem ul {
+  list-style-type: none;
+}
 .poem > div::after {
   content: "";
   position: absolute;

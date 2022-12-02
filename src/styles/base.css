@@ -109,6 +109,7 @@ button .btn-front img {
 button.push-btn {
   border-radius: 12px;
   border: none;
+  margin: auto;
   padding: 0;
   outline-offset: 4px;
   background: hsl(239deg 35% 16%);
@@ -271,4 +272,33 @@ h2.bold::after {
   transform: rotate(-5deg);
   background-color: #2f3061;
   z-index: -1;
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-links a {
+  margin: 0 2px;
+  width: 30px;
+  transition: 0.4s all;
+}
+
+.social-links > a > img {
+  width: 100%;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .timeline,
+  .skills {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
 }

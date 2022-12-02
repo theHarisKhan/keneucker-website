@@ -28,10 +28,10 @@ function ProjectCard(props) {
                 <Image
                   src="/img/icons8-linking.svg"
                   alt="icons8-linking"
-                  fill={true}
-                  style={{
-                    maxWidth: "20px"
-                  }} />
+                  objectFit="cover"
+                  width={150}
+                  height={100}
+                />
               </span>
             </button>
           </a>
