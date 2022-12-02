@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function How() {
   return (
@@ -19,10 +19,13 @@ export default function How() {
               <Image
                 src="/img/coffecup.svg"
                 alt="Buy me a Coffee"
-                objectFit="cover"
                 height={20}
                 width={25}
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
             </span>
           </button>
         </a>
@@ -33,10 +36,13 @@ export default function How() {
               <Image
                 src="/img/kofi.svg"
                 alt="Support me on Ko-fi"
-                objectFit="cover"
                 height={20}
                 width={25}
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
             </span>
           </button>
         </a>
@@ -50,10 +56,13 @@ export default function How() {
         <Image
           src="/img/octocat-for-sponsors.png"
           alt="sponsor me on github"
-          objectFit="cover"
           height={150}
           width={150}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
         <span>Sponsor me on Github</span>
       </a>
     </div>

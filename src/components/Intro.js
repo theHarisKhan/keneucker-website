@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function Intro() {
   return (
@@ -22,10 +22,13 @@ function Intro() {
                 <Image
                   src="/img/pdf-icon.svg"
                   alt="pdf icon"
-                  objectFit="cover"
-                  width={20}  
-                  height={25}  
-                />
+                  width={20}
+                  height={25}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "cover"
+                  }} />
               </span>
             </button>
           </a>
@@ -36,7 +39,11 @@ function Intro() {
               src="/img/ken_eucker_boom_headshot_cropped-removebg.png"
               alt="Ken Eucker Profile Image"
               fill={true}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "cover"
+              }} />
           </div>
         </div>
       </div>

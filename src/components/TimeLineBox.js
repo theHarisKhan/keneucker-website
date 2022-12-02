@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function TimeLineBox(props) {
   return (
@@ -8,9 +8,11 @@ function TimeLineBox(props) {
           src={props?.img}
           alt={props?.title}
           width={45}
-          height={45} 
+          height={45}
           style={{
-            objectFit: "contain"
+            objectFit: "contain",
+            maxWidth: "100%",
+            height: "auto"
           }} />
       </div>
       <div className="atb-info">

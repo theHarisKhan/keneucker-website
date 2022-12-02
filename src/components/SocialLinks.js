@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function SocialLinks() {
   return (
@@ -11,10 +11,13 @@ function SocialLinks() {
         <Image
           src="/img/patreon-logo-new.png"
           alt="patreon-logo"
-          objectFit="cover"
           height={30}
           width={30}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </a>
       <a
         href="https://www.upwork.com/freelancers/~01ff1e3b91571a0179"
@@ -24,10 +27,13 @@ function SocialLinks() {
         <Image
           src="/img/upwork-logo.png"
           alt="upwork-logo"
-          objectFit="cover"
           height={30}
           width={30}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </a>
       <a
         href="https://github.com/KenEucker"
@@ -37,10 +43,13 @@ function SocialLinks() {
         <Image
           src="/img/Github.svg"
           alt="Github"
-          objectFit="cover"
           height={30}
           width={30}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </a>
       <a
         href="https://linkedin.com/in/keneucker"
@@ -50,10 +59,13 @@ function SocialLinks() {
         <Image
           src="/img/Linkedin.svg"
           alt="linkedIn"
-          objectFit="cover"
           height={30}
           width={30}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </a>
       <a
         href="https://www.couchsurfing.com/people/keneucker"
@@ -63,10 +75,13 @@ function SocialLinks() {
         <Image
           src="/img/cs-logo-reverse.png"
           alt="cs-logo-reverse"
-          objectFit="cover"
           height={30}
           width={30}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </a>
       <a
         href="https://dev.to/KenEucker"
@@ -76,10 +91,13 @@ function SocialLinks() {
         <Image
           src="/img/devto-svg.svg"
           alt="devto"
-          objectFit="cover"
           height={30}
           width={30}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </a>
     </div>
   );

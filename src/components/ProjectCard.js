@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function ProjectCard(props) {
   return (
@@ -7,8 +7,11 @@ function ProjectCard(props) {
         <Image
           src={props?.img}
           alt={props?.img}
-          fill={true} 
-          />
+          fill={true}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       {props?.preview && <>
         <h3>{props?.title}</h3>
@@ -33,10 +36,13 @@ function ProjectCard(props) {
                   <Image
                     src="/img/icons8-linking.svg"
                     alt="icons8-linking"
-                    objectFit="cover"
                     width={150}
                     height={100}
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                      objectFit: "cover"
+                    }} />
                 </span>
               </button>
             </a>

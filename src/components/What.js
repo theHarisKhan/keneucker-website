@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { useState } from "react";

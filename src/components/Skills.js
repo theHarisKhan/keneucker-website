@@ -1,8 +1,8 @@
 import ProjectCard from "./ProjectCard";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function Skills() {
-  return (   
+  return (
     <div className="skills">
         <h2 className="bold">What</h2>
         <div className="skills-wrapper">
@@ -16,7 +16,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -29,7 +31,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -42,7 +46,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -55,7 +61,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -68,7 +76,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -81,7 +91,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -94,7 +106,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -107,7 +121,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -120,7 +136,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -133,7 +151,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -146,7 +166,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -159,7 +181,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -172,7 +196,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -185,7 +211,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -198,7 +226,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -211,7 +241,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -224,7 +256,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
           <div className="skill-thumbnail">
@@ -237,7 +271,9 @@ function Skills() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "contain"
+                objectFit: "contain",
+                maxWidth: "100%",
+                height: "auto"
               }} />
           </div>
         </div>

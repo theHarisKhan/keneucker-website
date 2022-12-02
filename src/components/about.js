@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import SocialLinks from "./SocialLinks";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useState } from "react";
 
 function About() {
@@ -14,10 +14,13 @@ function About() {
             <Image
               src="/img/ken_eucker_boom_headshot.png"
               alt="ken_eucker_boom_headshot"
-              objectFit="cover"
               height={290}
               width={170}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "cover"
+              }} />
           </div>
           <h2>Ken Eucker</h2>
           <SocialLinks />
