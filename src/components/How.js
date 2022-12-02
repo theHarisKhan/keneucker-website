@@ -51,8 +51,8 @@ export default function How() {
           src="/img/octocat-for-sponsors.png"
           alt="sponsor me on github"
           objectFit="cover"
-          height={40}
-          width={25}
+          height={150}
+          width={150}
         />
         <span>Sponsor me on Github</span>
       </a>

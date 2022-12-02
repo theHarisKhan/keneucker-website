@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 90px;
 }
 
 .how-section > p{
@@ -19,10 +19,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.sponsor-link img{
-    width: 150px;
 }
 
 .sponsor-link span{
