@@ -7,7 +7,8 @@ function ProjectCard(props) {
         <Image
           src={props?.img}
           alt={props?.img}
-          fill={true} />
+          fill={true} 
+          />
       </div>
       {props?.preview && <>
         <h3>{props?.title}</h3>

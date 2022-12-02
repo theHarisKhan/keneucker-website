@@ -7,13 +7,9 @@ function TimeLineBox(props) {
         <Image
           src={props?.img}
           alt={props?.title}
-          width={15}
-          height={15}
-          blurDataURL="data:..."
-          sizes="100vw"
+          width={45}
+          height={45} 
           style={{
-            width: "100%",
-            height: "auto",
             objectFit: "contain"
           }} />
       </div>
