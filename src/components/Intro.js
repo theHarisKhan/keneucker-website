@@ -37,7 +37,7 @@ function Intro() {
         <div className="hs-thumbnail">
           <div className="hs-bolb">
             <Image
-              src="/img/ken_eucker_boom_headshot_cropped-removebg.png"
+              src="/img/ken_eucker_cartoon.png"
               alt="Ken Eucker Profile Image"
               width={200}
               height={300}
