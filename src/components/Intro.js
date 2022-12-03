@@ -1,22 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 
-function Intro() {
+function Intro(props) {
   return (
     <div className="intro-section">
       <div className="hs-wrapper">
         <div className="hs-content">
           <h1 className="display">
-            Ken <span>Eucker</span>
+          {props?.firstName} <span>{props?.lastName}</span>
           </h1>
-          <p>
-            Hello, I'm Ken Eucker. I love to design applications, write poetry,
-            ride my bicycle, hike to hot springs, backpack through forests, take
-            candid photographs, and talk about the intersection of technology
-            and psychology. I also volunteer my time and energy to various projects 
-            throughout the year.
-          </p>
-          <a href="/doc/Ken_Eucker_Resume_2022.pdf" download={true}>
+          {props?.content}
+          <a href={props?.resumeFile} download={true}>
             <button className="push-btn" style={{"background": 'hsl(0deg 95% 25%)'}}>
               <span className="btn-front" style={{"background": '#ff0000'}}>
                 <span>Resume</span>
@@ -37,10 +31,10 @@ function Intro() {
         <div className="hs-thumbnail">
           <div className="hs-bolb">
             <Image
-              src="/img/ken_eucker_cartoon.png"
-              alt="Ken Eucker Profile Image"
-              width={200}
-              height={300}
+              src={props?.srcHeader}
+              alt={props?.altHeader}
+              width={props?.headerWidth ?? 200}
+              height={props?.headerHeight ?? 300}
               style={{
                 maxWidth: "100%",
                 height: "auto",
