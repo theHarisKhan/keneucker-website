@@ -7,7 +7,7 @@ export default function Why() {
   return (
     <div className="why-section">
       <h2 className="bold">Why</h2>
-      <div className={`${readmore ? 'readit-block' : ''} poem-wrapper`}>
+      <div className={readmore ? 'readit-block' : ''}>
         <div>
           <ul>
             <li style={{ color: "yellow" }}>

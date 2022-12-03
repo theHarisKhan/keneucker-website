@@ -1,13 +1,14 @@
 import Image from "next/image";
 
-function ProjectCard(props) {
+function Project(props) {
   return (
     <div className="project-card">
       <div className="pct-thumbnail">
         <Image
           src={props?.img}
           alt={props?.img}
-          fill={true}
+          width={200}
+          height={300}
           style={{
             maxWidth: "100%",
             height: "auto"
@@ -53,4 +54,4 @@ function ProjectCard(props) {
   );
 }
 
-export default ProjectCard;
+export default Project;

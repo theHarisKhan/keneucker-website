@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 
 function Intro() {
@@ -38,7 +39,8 @@ function Intro() {
             <Image
               src="/img/ken_eucker_boom_headshot_cropped-removebg.png"
               alt="Ken Eucker Profile Image"
-              fill={true}
+              width={200}
+              height={300}
               style={{
                 maxWidth: "100%",
                 height: "auto",

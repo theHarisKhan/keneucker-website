@@ -1,0 +1,7 @@
+.what-section {
+  margin-top: 30px;
+}
+
+.what-section > .push-btn {
+  display: block;
+}

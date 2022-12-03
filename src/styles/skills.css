@@ -1,0 +1,8 @@
+.skill-stars {
+  position: relative;
+}
+
+.skill-years {
+  position: absolute;
+  top: -100%;
+}

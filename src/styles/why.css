@@ -13,6 +13,7 @@
   height: 530px;
   overflow: hidden;
   transition: height 0.5s all;
+  text-align: center;
 }
 
 .why-section > div.readit-block {

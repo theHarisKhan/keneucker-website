@@ -10,8 +10,10 @@
 @import url("about.css");
 @import url('why.css');
 @import url('how.css');
+@import url('what.css');
 @import url('where.css');
 @import url('projects.css');
+@import url('skills.css');
 @import url('footer.css');
 * {
   padding: 0;
@@ -82,5 +84,16 @@ body {
 @media (max-width: 767px) {
   .main-content {
     padding: 20px;
+  }
+
+  .main-content > div {
+    /* max-width: 80vw; */
+  }
+}
+
+@media (min-width: 767px) {
+  .main-content > div {
+    max-width: 800px;
+    margin: auto;
   }
 }

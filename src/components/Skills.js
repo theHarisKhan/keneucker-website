@@ -1,5 +1,4 @@
-import ProjectCard from "./ProjectCard";
-import Image from "next/image";
+import Skill from "./Skill";
 
 function Skills() {
   return (
@@ -7,274 +6,132 @@ function Skills() {
         <h2 className="bold">What</h2>
         <div className="skills-wrapper">
           <div className="skill-thumbnail">
-            <Image
-              src="/img/html.svg"
-              alt="html"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/html.svg"
+              text="html for 10+ years"
+              stars={4}
+              years={"10+"}
+              />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/css3.svg"
-              alt="CSS3"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/css3.svg"
+              text="css3 for 10+ years"
+              stars={4}
+              years={"10+"}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/javascript.svg"
-              alt="javascript"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/javascript.svg"
+              text="javascript for 10+ years"
+              stars={4}
+              years={"10+"}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/ejs-logo.svg"
-              alt="ejs-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/react.svg"
+              text="react for 5 years"
+              stars={3}
+              years={5}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/react.svg"
-              alt="react"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/mongodb.svg"
+              text="mongodb for 4 years"
+              stars={3}
+              years={4}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/mongodb.svg"
-              alt="mongodb"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/php-logo.png"
+              text="php for 10+ years"
+              stars={4}
+              years={"10+"}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/php-logo.png"
-              alt="php-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/nodejs.svg"
+              text="nodejs for 10+ years"
+              stars={5}
+              years={"10+"}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/nodejs.svg"
-              alt="nodejs"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/liquidjs-logo.png"
+              text="liquidjs for 2 years"
+              stars={2}
+              years={1}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/node-javascript.png"
-              alt="node-javascript"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/ts-logo-round-256.svg"
+              text="typescript for 4 years"
+              stars={3}
+              years={4}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/liquidjs-logo.png"
-              alt="liquidjs-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/coffeescript.svg"
+              text="coffeescript for one year"
+              stars={1}
+              years={1}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/ts-logo-round-256.svg"
-              alt="ts-logo-round-256"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/mysql-logo.png"
+              text="mysql for 10+ years"
+              stars={4}
+              years={"10+"}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/coffeescript.svg"
-              alt="coffeescript"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/redis-logo.png"
+              text="redis for 2 years"
+              stars={2}
+              years={2}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/mysql-logo.png"
-              alt="mysql-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/dotnet-logo.png"
+              text="dotnet for 4 years"
+              stars={3}
+              years={4}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/redis-logo.png"
-              alt="redis-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/mssql-logo.png"
+              text="mssql for 4 years"
+              stars={3}
+              years={4}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/dotnet-logo.png"
-              alt="dotnet-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/git.svg"
+              text="git for 10+ years"
+              stars={4}
+              years={"10+"}
+            />
           </div>
           <div className="skill-thumbnail">
-            <Image
-              src="/img/mssql-logo.png"
-              alt="mssql-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
-          </div>
-          <div className="skill-thumbnail">
-            <Image
-              src="/img/git.svg"
-              alt="git-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
-          </div>
-          <div className="skill-thumbnail">
-            <Image
-              src="/img/c-logo.png"
-              alt="c-logo"
-              width={15}
-              height={15}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+            <Skill
+              img="/img/c-logo.png"
+              text="c sharp for 4 years"
+              stars={3}
+              years={4}
+            />
           </div>
         </div>
     </div>
