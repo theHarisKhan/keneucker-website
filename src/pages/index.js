@@ -49,11 +49,14 @@ function index() {
             javascript, with extensive experience building the backend of
             web-connected properties.
             <br />
-            <br /> I have a wide range of skills writing in the serverside
-            languages C#, PHP, Javascript, and the clientside languages HTML,
-            Javascript, CSS, TypeScript, including the database languages
-            mysql, MSSQL, and Mongodb. <br />
-            <br />I primarily work with node applications and node built 
+            <br />
+            I have a wide range of skills writing in the serverside
+            languages TypeScript, Javascript, PHP, C#, and the clientside 
+            languages HTML, Javascript, CSS, TypeScript, including the database 
+            languages mysql, MSSQL, and Mongodb. 
+            <br />
+            <br />
+            I primarily work with node applications and node built 
             front-end projects at the moment. Previously to this I was working 
             on WordPress projects migrating to React front-end experiences.
           </p>
@@ -105,7 +108,7 @@ function index() {
             communities, and online groups. In 2016, I became a Ranger, which 
             is a peer support and emergency response role, at Portland's regional 
             Burning Man event, named SOAK. In 2019, I went to Burning Man for the third 
-            and became a Black Rock Ranger. Since then, I have continued to Ranger 
+            time and became a Black Rock Ranger. Since then, I have continued to Ranger 
             in Black Rock City each year and I have committed to doing so for the 
             indefinite future.
           </p>
