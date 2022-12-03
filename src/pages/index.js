@@ -35,7 +35,22 @@ function index() {
 
       {/* Components */}
       {/* Intro Header */}
-      <Intro />
+      <Intro 
+        firstName={"Ken"}
+        lasstName={"Eucker"}
+        content={
+          <p>
+            Hello, I'm Ken Eucker. I love to design applications, write poetry,
+            ride my bicycle, hike to hot springs, backpack through forests, take
+            candid photographs, and talk about the intersection of technology
+            and psychology. I also volunteer my time and energy to various projects 
+            throughout the year.
+          </p>
+        }
+        resumeFile={"/img/pdf-icon.svg"}
+        srcHeader={"/img/ken_eucker_cartoon.png"}
+        altHeader={"Ken Eucker"}
+      />
       {/* About Me professionally */}
       <About 
         img={"/img/ken_eucker_boom_headshot.png"}
@@ -146,64 +161,24 @@ function index() {
             <a href="mailto:hello@keneucker.com">hello@keneucker.com</a>
           </p>
         }
-        button1={
-          <a href="https://www.buymeacoffee.com/keneucker" target="_blank" rel="noreferrer">
-            <button className="push-btn" style={{ background: "#90390c" }}>
-              <span className="btn-front" style={{ background: "#FF813F" }}>
-                <span>Buy me a Coffee</span>
-                <Image
-                  src="/img/coffecup.svg"
-                  alt="Buy me a Coffee"
-                  height={20}
-                  width={25}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    objectFit: "cover"
-                  }} />
-              </span>
-            </button>
-        </a>
-        }
-        button2={
-          <a href="https://ko-fi.com/keneucker" target="_blank" rel="noreferrer">
-          <button className="push-btn" style={{ background: "#90390c" }}>
-            <span className="btn-front" style={{ background: "#FF5E5B" }}>
-              <span>Support me on Ko-fi</span>
-              <Image
-                src="/img/kofi.svg"
-                alt="Support me on Ko-fi"
-                height={20}
-                width={25}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  objectFit: "cover"
-                }} />
-            </span>
-          </button>
-        </a>
-        }
-        sponsor={
-          <a
-            className="sponsor-link"
-            href="https://github.com/sponsors/KenEucker"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/img/octocat-for-sponsors.png"
-              alt="sponsor me on github"
-              height={150}
-              width={150}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                objectFit: "cover"
-              }} />
-            <span>Sponsor me on Github</span>
-          </a>
-        }
+        button1={{
+          href: "https://www.buymeacoffee.com/keneucker",
+          fg: "#FF813F",
+          text: "Buy me a Coffee",
+          imgSrc: "/img/coffecup.svg",
+        }}
+        button2={{
+          href: "https://ko-fi.com/keneucker",
+          fg: "#FF5E5B",
+          text: "Support me on Ko-fi",
+          imgSrc: "/img/kofi.svg",
+        }}
+        sponsor={{
+            href: "https://github.com/sponsors/KenEucker",
+            imgSrc: "/img/octocat-for-sponsors.png",
+            imgAlt: "sponsor me on github",
+            text: "Sponsor me on Github",
+        }}
       />
 
       {/* Contact Me Footer */}
