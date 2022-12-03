@@ -2,13 +2,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Intro from "../components/Intro";
+import About from "../components/About2";
 import Why from "../components/Why";
 import How from "../components/How";
 import What from "../components/What";
 import Where from "../components/Where";
 import Footer from "../components/Footer";
 import SocialLinks from "../components/SocialLinks";
-import About from "../components/about";
 
 function index() {
   return (
