@@ -28,6 +28,7 @@
   height: 360px;
   object-fit: cover;
   border-radius: 50%;
+  padding-bottom: 30px;
 }
 
 .hs-content h1 > span {
