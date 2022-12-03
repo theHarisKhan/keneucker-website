@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
+import Image from "next/image";
 import Intro from "../components/Intro";
-import About from "../components/About";
 import Why from "../components/Why";
 import How from "../components/How";
 import What from "../components/What";
 import Where from "../components/Where";
 import Footer from "../components/Footer";
 import SocialLinks from "../components/SocialLinks";
+import About from "../components/About";
 
 function index() {
   return (
@@ -33,7 +34,9 @@ function index() {
       </Head>
 
       {/* Components */}
+      {/* Intro Header */}
       <Intro />
+      {/* About Me professionally */}
       <About 
         img={"/img/ken_eucker_boom_headshot.png"}
         name={"Ken Eucker"}
@@ -87,6 +90,7 @@ function index() {
           </p>
         }
       />
+      {/* About Me personally */}
       <About 
         img={"/img/Ken_Eucker_BlackRock_Ranger.jpg"}
         secondImg={"/img/brc-ranger-logo.png"}
@@ -124,10 +128,82 @@ function index() {
           </p>
         }
       />
+      {/* Where you can find me */}
       <Where />
+      {/* What you can find me doing */}
       <What />
+      {/* Why you can find me doing it */}
       <Why />
-      <How />
+      {/* How I can continue doing it */}
+      <How 
+        availabilty={
+          <p>
+            I am available for hire on remote contracts only, to get in touch please
+            send me an email:{" "}
+            <a href="mailto:hello@keneucker.com">hello@keneucker.com</a>
+          </p>
+        }
+        button1={
+          <a href="https://www.buymeacoffee.com/keneucker" target="_blank" rel="noreferrer">
+            <button className="push-btn" style={{ background: "#90390c" }}>
+              <span className="btn-front" style={{ background: "#FF813F" }}>
+                <span>Buy me a Coffee</span>
+                <Image
+                  src="/img/coffecup.svg"
+                  alt="Buy me a Coffee"
+                  height={20}
+                  width={25}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "cover"
+                  }} />
+              </span>
+            </button>
+        </a>
+        }
+        button2={
+          <a href="https://ko-fi.com/keneucker" target="_blank" rel="noreferrer">
+          <button className="push-btn" style={{ background: "#90390c" }}>
+            <span className="btn-front" style={{ background: "#FF5E5B" }}>
+              <span>Support me on Ko-fi</span>
+              <Image
+                src="/img/kofi.svg"
+                alt="Support me on Ko-fi"
+                height={20}
+                width={25}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
+            </span>
+          </button>
+        </a>
+        }
+        sponsor={
+          <a
+            className="sponsor-link"
+            href="https://github.com/sponsors/KenEucker"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="/img/octocat-for-sponsors.png"
+              alt="sponsor me on github"
+              height={150}
+              width={150}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "cover"
+              }} />
+            <span>Sponsor me on Github</span>
+          </a>
+        }
+      />
+
+      {/* Contact Me Footer */}
       <Footer />
     </>
   );
