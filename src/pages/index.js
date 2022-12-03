@@ -8,7 +8,7 @@ import What from "../components/What";
 import Where from "../components/Where";
 import Footer from "../components/Footer";
 import SocialLinks from "../components/SocialLinks";
-import About from "../components/About";
+import About from "../components/about";
 
 function index() {
   return (
